@@ -1,0 +1,68 @@
+﻿@model BCBS_Api.Models.U65Certificate
+@{
+    Layout = null;
+}
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Certificate</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/certificatestyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="cert_container">
+        <div id="cert_title">Certificate of Completion</div>
+        <div id="first_text">This is to certify that</div>
+        <div id="User_name">@Model.AgentName, @Model.AgencyAddress</div>
+        <div id="second_text">having Medical License No. <span class="special_font">@Model.AgentManagingHealth</span> & National Provider Identifier (NPI) <span class="special_font">@Model.FFMID</span>
+            <br>
+            from <span class="special_font">@Model.AssessmentScore</span> has completed the</div>
+        <div id="Course_name">@Model.FFMID</div>
+        <div id="Type_Mode"><span class="special_font">@Model.AgentEmail course on @Model.NationalProducerNumber.</span></div>
+        <div id="Last_text"><span class="special_font">@Model.PassFailStatus</span> is now eligible to apply for <span class="special_font">@Model.WorkPhoneNumber</span> credit hours for<br>
+            <span class="special_font">@Model.DateofCompletion.</span></div>
+    </div>
+</body>
+</html>*@
+
+
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://aptaraelearning.com/Home/Certificate/ba2267ec-7f05-4328-b7fd-2300f147e3d0 -->
+<!DOCTYPE html PUBLIC "" "">
+<html>
+
+<head>
+    <meta content="IE=11.0000" http-equiv="X-UA-Compatible">
+    <title>Certificate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+</head>
+
+<body>
+    <div style="margin: 60px auto auto; width: 791px; height: 431px; background-image: url('Certificate_files/Certificate_bg.jpg');">
+        <div style="width: 791px; height: 45px; text-align: center; color: rgb(255, 255, 255); line-height: 45px; font-family: Times New Roman; font-size: 33px; font-weight: bold;">Certificate of Completion</div>
+        <div style="width: 791px; height: 40px; text-align: center; color: rgb(0, 0, 0); line-height: 40px; font-family: verdana; font-size: 14px;">This is to certify that</div>
+        <div style="width: 791px; height: 49px; text-align: center; color: rgb(0, 102, 170); line-height: 49px; font-family: tahoma; font-size: 30px; font-weight: bold;">@Model.AgentName</div>
+        <div style="width: 791px; height: 40px; text-align: center; color: rgb(0, 0, 0); line-height: 23px; font-family: verdana; font-size: 14px; margin-top: 15px;">
+            of <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold;">@Model.AgencyName</span> having National Producer Number
+            <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold;">@Model.NationalProducerNumber</span> <br> &amp; FFM ID <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold;">@Model.FFMID</span> has successfully completed the
+        </div>
+        <div style="width: 791px; height: 60px; text-align: center; color: rgb(241, 79, 0); line-height: 75px; font-family: tahoma; font-size: 25px;">Blue Cross NC 2019 Individual, Under-65 New Agent Training </div>
+        <div style="width: 791px; height: 20px; text-align: center; color: rgb(0, 0, 0); line-height: 25px; font-family: verdana; font-size: 14px; margin-top: 0px;">on </div>
+        <div style="width: 791px; height: 40px; text-align: center; line-height: 40px; font-family: verdana; font-size: 14px;">
+            <span class="special_font">
+                @Model.DateofCompletionstring
+            </span>
+        </div>
+        <div style="width: 791px; height: 70px; text-align: center; color: rgb(0, 0, 0); line-height: 25px; font-family: verdana; font-size: 14px; margin-top: 10px;">
+            <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold;">@Model.AgentName</span> is now eligible to sell  <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold;">Blue Cross NC 2019 Individual Under 65</span><br> products in the state of North Carolina.
+        </div>
+    </div>
+</body>
+
+</html>
+
+

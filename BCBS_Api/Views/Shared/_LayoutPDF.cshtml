@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+@{
+    var imagePath = Server.MapPath("~/Images/");
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+
+</head>
+<body>
+    <div class="main">
+        <div class="inner-wrapper">
+            <div style="margin: 60px auto auto; width: 680px; height: 431px; background-image: url('@imagePath/Certificate_bg.jpg');">
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

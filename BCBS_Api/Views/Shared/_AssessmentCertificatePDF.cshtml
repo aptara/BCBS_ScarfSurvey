@@ -1,0 +1,36 @@
+﻿@model BCBS_Api.DataAccess.Assessment
+@{
+    Layout = "~/Views/Shared/_LayoutPDF.cshtml";
+    var imagePath = Server.MapPath("~/Images/");
+
+}
+<head>
+    <meta content="IE=11.0000" http-equiv="X-UA-Compatible" />
+    <title>Assessment Certificate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="GENERATOR" content="MSHTML 11.00.10570.1001" />
+</head>
+<p style="height: 30px; text-align: center; color: rgb(255, 255, 255); line-height: 30px; margin-top:55px; margin-bottom:15px; font-family: Times New Roman; font-size: 25px; font-weight: bold;">Certificate of Assessment</p>
+<p style="margin:0px; margin-bottom:5px; padding:0px; text-align: center; color: rgb(0, 0, 0); font-family: verdana; font-size: 14px;">This is to certify that</p>
+<p style="text-align: center; margin:0px; padding:0px; color: rgb(0, 102, 170); font-family: tahoma; font-size: 30px; font-weight: bold;">@Model.LearnerName</p>
+<p style="height: 40px; margin:0px; padding:0px; margin-bottom:15px; text-align: center; color: rgb(0, 0, 0); line-height: 23px; font-family: verdana; font-size: 14px; margin-top: 15px;">
+    of <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold;">@Model.LearnerName</span> having National Producer Number
+    <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold;">@Model.WorkDayId</span><br /> &amp; WorkDay ID <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold;">@Model.WorkDayId</span> has
+    successfully completed the
+</p>
+<p style="text-align: center; color: rgb(241, 79, 0); margin:0px; padding:0px; font-family: tahoma; font-size: 20px;">Blue Cross NC 2019 Individual, Under-65 New Agent Training </p>
+<p style="height: 15px; text-align: center; color: rgb(0, 0, 0); font-family: verdana; font-size: 14px; margin:0px; padding:0px;">
+    on <span style="height: 40px; text-align: center; font-family: verdana; margin:0px; padding:0px; font-size: 14px;">
+        <span style="color: rgb(0, 102, 170); font-size: 16px; font-weight: bold; margin:0px; padding:0px;">
+            @Model.Pre_Assm_Score_Percentage %
+        </span>
+    </span>
+</p>
+
+<p style="height:30px; margin:0px; padding:0px; text-align: center; color: rgb(0, 0, 0); line-height: 18px; font-family: verdana; font-size: 13px; margin-top: 10px;">
+    <span style="color: rgb(0, 102, 170); font-size: 15px; font-weight: bold;">@Model.LearnerName</span> is now eligible to sell
+<p style="color: rgb(0, 102, 170); font-size: 15px; font-weight: bold; margin:0px; padding:0px;">Blue Cross NC 2019 Individual Under 65</p> products in the state of North Carolina.
+        </p>
+
+

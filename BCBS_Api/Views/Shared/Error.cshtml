@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+<style>
+    body {
+        background:#00adef;
+        font-family: 'Roboto-Regular';
+    }
+</style>
+           
+</head>
+
+<body>
+
+    <div class="error-wrapper">
+        <hgroup class="title">
+            <h1 class="error-title"><span>OOPS! </span></h1>
+            <h2 class="error-top">Something Went Wrong.</h2>
+            <h2 class="error">You are not authorized to perform <br />the requested action.</h2>
+        </hgroup>
+        <div class="error-user-icon"><a id="Id_Home" title="Click Here To Login" href="@Url.Action("Login", "Account")"><img src="~/Content/images/user_icon.png" /></a></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+﻿@using Kendo.Mvc.UI
+<script type="text/javascript">
+    function onDataSourceErrorU65( ) {
+        alert("Error occoured to fetch record from server.");
+    }
+</script>
+<h1 style="clear:both;"> Certificate Report</h1>
+
+@(Html.Kendo().Grid<BCBS_Api.Models.U65Certificate>().Name("coursesGrid")
+        .ToolBar(commands => commands.Template(@<text><a id="btnExport" href="@Url.Action("U65ExportData","Home")">Export Data In Excel</a></text>))
+            .Columns(columns =>
+            {
+                columns.Bound(p => p.U65_Id).Title("").Width(160).Filterable(false)
+                .ClientTemplate(@"# if (PassFailStatus) { #<a href='/Home/U65Certificate/#=U65_Id#' target='_blank'  class='view-btn' >View Certificate</a> # } #");
+                columns.Bound(p => p.PassFailStatusstring).Width(180).Title("Pass / Fail Status");
+                columns.Bound(p => p.AgentName).Width(250).Title("Agent Name");
+                columns.Bound(p => p.AgencyName).Width(250).Title("Agency Name");
+                columns.Bound(p => p.AgencyAddress).Width(250).Title("Agency Address");
+                columns.Bound(p => p.AgentManagingHealth).Width(300).Title("Managing Health Agent Name");
+                columns.Bound(p => p.AgentEmail).Width(200).Title("Agent Email");
+                columns.Bound(p => p.WorkPhoneNumber).Width(200).Title("Work Phone Number");
+                columns.Bound(p => p.NationalProducerNumber).Width(250).Title("National Producer Number");
+                columns.Bound(p => p.FFMID).Width(100).Title("FFM ID");
+                columns.Bound(p => p.AssessmentScore).Width(200).Title("Assessment Score");
+                columns.Bound(p => p.DateofCompletionstring).Width(180).Title("Date of completion");
+            })
+            .Pageable(paging => paging.PageSizes(new int[] { 10, 15, 20, 25, 30 }).PreviousNext(true).Refresh(true).Info(true).Input(true).Numeric(true))
+            .Scrollable(s => s.Height("auto"))
+            .Sortable()
+            .Filterable()
+            .Resizable(x => x.Columns(true))
+            .DataSource(dataSource => dataSource.Ajax()
+            .PageSize(10)
+            .ServerOperation(false)
+            .Model(model =>
+            {
+                model.Id(p => p.U65_Id);
+            })
+            .Events(ev => ev.Error("onDataSourceErrorU65"))
+            .Read(read => read.Action("U65GetReportData", "Home"))
+            )
+)
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#btnExport").button();
+                });
+            </script>

@@ -1,0 +1,182 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@using Kendo.Mvc.UI
+
+@{
+
+    if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Enterprise")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - Enterprise </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "CustomerService")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - CSP - Commercial (Member)</h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Claims")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - CSP - Senior Market </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Healthcare")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - CSP-Commercial (Provider) </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Membership")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - Membership </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "StateHealthPlan")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - StateHealthPlan</h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Claims1")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - Membership – SMA</h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Claims3")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - FEP for Service </h1>
+    }   
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Healthcare1")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - SHP - Healthcare</h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Claims2")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - Claims - SMA </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Healthcare2")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - FEP - Healthcare</h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Healthcare3")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - SMA - Healthcare</h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Healthcare4")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - Commercial - Healthcare</h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Healthcare5")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 - Appeals - Healthcare </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Sales")
+    {
+        <h1 style="clear:both;"> Fall Release 2019 – ClaimsTraining </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Claims4")
+    {
+        <h1 style="clear:both;"> FEP Open Season for Claims </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Claims5")
+    {
+        <h1 style="clear:both;"> Not In Use </h1>
+    }
+    else if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "Claims6")
+    {
+        <h1 style="clear:both;"> Not In Use </h1>
+    }
+    else
+    {
+        <h1 style="clear:both;">  @System.Configuration.ConfigurationManager.AppSettings["ProjectName"] </h1>
+    }
+
+}
+
+@(Html.Kendo().Grid<BCBS_Api.Models.SalesCertificate>().Name("SalesGrid")
+        .ToolBar(commands => commands.Template(@<text><a id="btnSalesExport" href="@Url.Action("SalesExportData", "SalesReport")">Export Data In Excel</a></text>))
+            .Columns(columns =>
+            {
+                columns.Bound(p => p.SalesId).Hidden(true);//.ClientTemplate(@"# if (Pre_Assm_Result == true || Post_Assm_Result == true) { #<a href='../Assessment/AssessmentCertificate/?SalesId=#=SalesId#' target='_blank'  class='view-btn' >View Certificate</a> # } #").Width(130).Title("").Filterable(false);
+                columns.Bound(p => p.WorkDayId).Width(300).Title("WorkDay Id");
+                columns.Bound(p => p.LearnerName).Width(300).Title("Learner Name");
+                columns.Bound(p => p.CompletionStatusString).Title("Completion Status").Width(280);
+                columns.Bound(p => p.ReportDate).Format("{0:MM/dd/yyyy}").Title("Report Date").Width(180);
+                columns.Bound(p => p.PreAssmResult).Hidden(true);
+                columns.Bound(p => p.PreAssmResultString).Width(180).Title("Pre-Assm Result");
+                columns.Bound(p => p.PreAssmScore).Width(200).Title("Pre-Assm Score %");
+                columns.Bound(p => p.PostAssmAttempt).Title("Post-Assm Attempt").Width(280).ClientTemplate("#if(PostAssmAttempt == 1) {#1#} else if(PostAssmAttempt == 2) {#2#}else{#NA#}#");
+                columns.Bound(p => p.PostAssmResult).Hidden(true);
+                //columns.Bound(p => p.PostAssmResultString).Width(180).Title("Post-Assm Result");
+                columns.Bound(p => p.PostAssmResultString).Width(180).Title("Post-Assm Result").Width(280).ClientTemplate("#if(PostAssmAttempt == 0) {#NA#}else{##=PostAssmResultString##}#");
+                //columns.Bound(p => p.PostAssmResultString).Width(180).Title("Post-Assm Result").Width(280).ClientTemplate("#if(PostAssmAttempt == 0) {#NA#}else{#\'#=PostAssmResultString#\' #}#");
+                columns.Bound(p => p.PostAssmScore).Width(200).Title("Post-Assm Score %");
+                columns.Bound(p => p.CompletionStatus).Hidden(true);
+                columns.Bound(p => p.Pre_Q01).Title("Pre-Q01").Width(100);
+                columns.Bound(p => p.Pre_Q02).Title("Pre-Q02").Width(100);
+                columns.Bound(p => p.Pre_Q03).Title("Pre-Q03").Width(100);
+                columns.Bound(p => p.Pre_Q04).Title("Pre-Q04").Width(100);
+                columns.Bound(p => p.Pre_Q05).Title("Pre-Q05").Width(100);
+                columns.Bound(p => p.Pre_Q06).Title("Pre-Q06").Width(100);
+                columns.Bound(p => p.Pre_Q07).Title("Pre-Q07").Width(100);
+                columns.Bound(p => p.Pre_Q08).Title("Pre-Q08").Width(100);
+                columns.Bound(p => p.Pre_Q09).Title("Pre-Q09").Width(100);
+                columns.Bound(p => p.Pre_Q10).Title("Pre-Q10").Width(100);
+                columns.Bound(p => p.Pre_Q11).Title("Pre-Q11").Width(100);
+                columns.Bound(p => p.Pre_Q12).Title("Pre-Q12").Width(100);
+                columns.Bound(p => p.Pre_Q13).Title("Pre-Q13").Width(100);
+                columns.Bound(p => p.Pre_Q14).Title("Pre-Q14").Width(100);
+                columns.Bound(p => p.Pre_Q15).Title("Pre-Q15").Width(100);
+                columns.Bound(p => p.Pre_Q16).Title("Pre-Q16").Width(100);
+                columns.Bound(p => p.Pre_Q17).Title("Pre-Q17").Width(100);
+                columns.Bound(p => p.Pre_Q18).Title("Pre-Q18").Width(100);
+                columns.Bound(p => p.Pre_Q19).Title("Pre-Q19").Width(100);
+                columns.Bound(p => p.Pre_Q20).Title("Pre-Q20").Width(100);
+                columns.Bound(p => p.Pre_Q21).Title("Pre-Q21").Width(100);
+                columns.Bound(p => p.Pre_Q22).Title("Pre-Q22").Width(100);
+                columns.Bound(p => p.Pre_Q23).Title("Pre-Q23").Width(100);
+                columns.Bound(p => p.Pre_Q24).Title("Pre-Q24").Width(100);
+                columns.Bound(p => p.Pre_Q25).Title("Pre-Q25").Width(100);
+                columns.Bound(p => p.Post_Q01).Title("Post-Q01").Width(100);
+                columns.Bound(p => p.Post_Q02).Title("Post-Q02").Width(100);
+                columns.Bound(p => p.Post_Q03).Title("Post-Q03").Width(100);
+                columns.Bound(p => p.Post_Q04).Title("Post-Q04").Width(100);
+                columns.Bound(p => p.Post_Q05).Title("Post-Q05").Width(100);
+                columns.Bound(p => p.Post_Q06).Title("Post-Q06").Width(100);
+                columns.Bound(p => p.Post_Q07).Title("Post-Q07").Width(100);
+                columns.Bound(p => p.Post_Q08).Title("Post-Q08").Width(100);
+                columns.Bound(p => p.Post_Q09).Title("Post-Q09").Width(100);
+                columns.Bound(p => p.Post_Q10).Title("Post-Q10").Width(100);
+                columns.Bound(p => p.Post_Q11).Title("Post-Q11").Width(100);
+                columns.Bound(p => p.Post_Q12).Title("Post-Q12").Width(100);
+                columns.Bound(p => p.Post_Q13).Title("Post-Q13").Width(100);
+                columns.Bound(p => p.Post_Q14).Title("Post-Q14").Width(100);
+                columns.Bound(p => p.Post_Q15).Title("Post-Q15").Width(100);
+                columns.Bound(p => p.Post_Q16).Title("Post-Q16").Width(100);
+                columns.Bound(p => p.Post_Q17).Title("Post-Q17").Width(100);
+                columns.Bound(p => p.Post_Q18).Title("Post-Q18").Width(100);
+                columns.Bound(p => p.Post_Q19).Title("Post-Q19").Width(100);
+                columns.Bound(p => p.Post_Q20).Title("Post-Q20").Width(100);
+                columns.Bound(p => p.Post_Q21).Title("Post-Q21").Width(100);
+                columns.Bound(p => p.Post_Q22).Title("Post-Q22").Width(100);
+                columns.Bound(p => p.Post_Q23).Title("Post-Q23").Width(100);
+                columns.Bound(p => p.Post_Q24).Title("Post-Q24").Width(100);
+                columns.Bound(p => p.Post_Q25).Title("Post-Q25").Width(100);
+            })
+            .Pageable(paging => paging.PageSizes(new int[] { 10, 15, 20, 25, 30 }).PreviousNext(true).Refresh(true).Info(true).Input(true).Numeric(true))
+            .Scrollable(s => s.Height("auto"))
+            .Sortable()
+            .Filterable()
+            .Resizable(x => x.Columns(true))
+            .DataSource(dataSource => dataSource.Ajax()
+            .PageSize(10)
+            .ServerOperation(false)
+            .Model(model =>
+            {
+                model.Id(p => p.SalesId);
+            })
+                            .Events(ev => ev.Error("onDataSourceSalesGrid"))
+               .Read(read => read.Action("GetSalesData", "SalesReport"))
+            )
+)
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btnSalesExport").button();
+    });
+
+    function onDataSourceSalesGrid() {
+        alert("Error occoured to fetch record from server.");
+    }
+</script>

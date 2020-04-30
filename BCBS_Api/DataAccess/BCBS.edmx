@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BCBSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Claims">
+          <Key>
+            <PropertyRef Name="SalesId" />
+          </Key>
+          <Property Name="SalesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkDayId" Type="nvarchar" MaxLength="200" />
+          <Property Name="LearnerName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Pre_Assm_Result" Type="bit" />
+          <Property Name="Pre_Assm_Score_Percentage" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Post_Assm_Attempt" Type="int" />
+          <Property Name="Post_Assm_Result" Type="bit" />
+          <Property Name="Post_Assm_Score_Percentage" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Pre_Q01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q05" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q06" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q07" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q08" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q09" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q10" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q11" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q12" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q13" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q14" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q15" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q16" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q17" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q18" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q19" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q20" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q21" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q22" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q23" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q24" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_Q25" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q05" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q06" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q07" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q08" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q09" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q10" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q11" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q12" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q13" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q14" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q15" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q16" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q17" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q18" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q19" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q20" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q21" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q22" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q23" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q24" Type="nvarchar" MaxLength="50" />
+          <Property Name="Post_Q25" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompletionStatus" Type="int" />
+          <Property Name="ReportDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CourseTitle" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="DeliveryMethod" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TotalContactHours" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SCARFSurveyAnswer">
+          <Key>
+            <PropertyRef Name="SCARFSurveyId" />
+          </Key>
+          <Property Name="SCARFSurveyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkDayId" Type="nvarchar" MaxLength="200" />
+          <Property Name="LearnerName" Type="nvarchar" MaxLength="200" />
+          <Property Name="managerName" Type="nvarchar" MaxLength="200" />
+          <Property Name="managerEmailID" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="nvarchar" MaxLength="200" />
+          <Property Name="StatusText" Type="nvarchar" MaxLength="500" />
+          <Property Name="Certainty" Type="nvarchar" MaxLength="200" />
+          <Property Name="CertaintyText" Type="nvarchar" MaxLength="500" />
+          <Property Name="Autonomy" Type="nvarchar" MaxLength="200" />
+          <Property Name="AutonomyText" Type="nvarchar" MaxLength="500" />
+          <Property Name="Relatedness" Type="nvarchar" MaxLength="200" />
+          <Property Name="RelatednessText" Type="nvarchar" MaxLength="500" />
+          <Property Name="Fairness" Type="nvarchar" MaxLength="200" />
+          <Property Name="FairnessText" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReportDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="U65">
+          <Key>
+            <PropertyRef Name="U65_Id" />
+          </Key>
+          <Property Name="U65_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AgencyAddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="AgentManagingHealth" Type="nvarchar" MaxLength="100" />
+          <Property Name="AgentEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="WorkPhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="NationalProducerNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="FFMID" Type="nvarchar" MaxLength="50" />
+          <Property Name="AssessmentScore" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PassFailStatus" Type="bit" />
+          <Property Name="DateofCompletion" Type="datetime" />
+          <Property Name="AgencyName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PracticeName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ProviderType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OfficialProviderName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MedicalLicenseNo" Type="varchar" MaxLength="50" />
+          <Property Name="TypeOfCredit" Type="varchar" MaxLength="500" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+          <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserCourses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="CourseId" Type="uniqueidentifier" />
+          <Property Name="Score" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="NPI" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="200" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Password" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="BCBSModelStoreContainer">
+          <EntitySet Name="Claims" EntityType="Self.Claims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCARFSurveyAnswer" EntityType="Self.SCARFSurveyAnswer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="U65" EntityType="Self.U65" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserCourses" EntityType="Self.UserCourses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BCBSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BCBSEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Claims" EntityType="BCBSModel.Claim" />
+          <EntitySet Name="Courses" EntityType="BCBSModel.Course" />
+          <EntitySet Name="SCARFSurveyAnswers" EntityType="BCBSModel.SCARFSurveyAnswer" />
+          <EntitySet Name="U65" EntityType="BCBSModel.U65" />
+          <EntitySet Name="Users" EntityType="BCBSModel.User" />
+          <EntitySet Name="UserCourses" EntityType="BCBSModel.UserCours" />
+          <EntitySet Name="UserMasters" EntityType="BCBSModel.UserMaster" />
+        </EntityContainer>
+        <EntityType Name="Claim">
+          <Key>
+            <PropertyRef Name="SalesId" />
+          </Key>
+          <Property Name="SalesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkDayId" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LearnerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Assm_Result" Type="Boolean" />
+          <Property Name="Pre_Assm_Score_Percentage" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Post_Assm_Attempt" Type="Int32" />
+          <Property Name="Post_Assm_Result" Type="Boolean" />
+          <Property Name="Post_Assm_Score_Percentage" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Pre_Q01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q07" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q08" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q09" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q13" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q14" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q15" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q16" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q17" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q18" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q19" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q20" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q21" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q22" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q23" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q24" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pre_Q25" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q07" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q08" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q09" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q13" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q14" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q15" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q16" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q17" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q18" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q19" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q20" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q21" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q22" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q23" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q24" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Q25" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompletionStatus" Type="Int32" />
+          <Property Name="ReportDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CourseTitle" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="DeliveryMethod" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TotalContactHours" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SCARFSurveyAnswer">
+          <Key>
+            <PropertyRef Name="SCARFSurveyId" />
+          </Key>
+          <Property Name="SCARFSurveyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkDayId" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LearnerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="managerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="managerEmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="StatusText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Certainty" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CertaintyText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Autonomy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AutonomyText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Relatedness" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RelatednessText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Fairness" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FairnessText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReportDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="U65">
+          <Key>
+            <PropertyRef Name="U65_Id" />
+          </Key>
+          <Property Name="U65_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AgentName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AgentManagingHealth" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AgentEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="WorkPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NationalProducerNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FFMID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AssessmentScore" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PassFailStatus" Type="Boolean" />
+          <Property Name="DateofCompletion" Type="DateTime" Precision="3" />
+          <Property Name="AgencyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="PracticeName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ProviderType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OfficialProviderName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MedicalLicenseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TypeOfCredit" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserCours">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="CourseId" Type="Guid" />
+          <Property Name="Score" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NPI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BCBSModelStoreContainer" CdmEntityContainer="BCBSEntities">
+          <EntitySetMapping Name="Claims">
+            <EntityTypeMapping TypeName="BCBSModel.Claim">
+              <MappingFragment StoreEntitySet="Claims">
+                <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+                <ScalarProperty Name="CompletionStatus" ColumnName="CompletionStatus" />
+                <ScalarProperty Name="Post_Q25" ColumnName="Post_Q25" />
+                <ScalarProperty Name="Post_Q24" ColumnName="Post_Q24" />
+                <ScalarProperty Name="Post_Q23" ColumnName="Post_Q23" />
+                <ScalarProperty Name="Post_Q22" ColumnName="Post_Q22" />
+                <ScalarProperty Name="Post_Q21" ColumnName="Post_Q21" />
+                <ScalarProperty Name="Post_Q20" ColumnName="Post_Q20" />
+                <ScalarProperty Name="Post_Q19" ColumnName="Post_Q19" />
+                <ScalarProperty Name="Post_Q18" ColumnName="Post_Q18" />
+                <ScalarProperty Name="Post_Q17" ColumnName="Post_Q17" />
+                <ScalarProperty Name="Post_Q16" ColumnName="Post_Q16" />
+                <ScalarProperty Name="Post_Q15" ColumnName="Post_Q15" />
+                <ScalarProperty Name="Post_Q14" ColumnName="Post_Q14" />
+                <ScalarProperty Name="Post_Q13" ColumnName="Post_Q13" />
+                <ScalarProperty Name="Post_Q12" ColumnName="Post_Q12" />
+                <ScalarProperty Name="Post_Q11" ColumnName="Post_Q11" />
+                <ScalarProperty Name="Post_Q10" ColumnName="Post_Q10" />
+                <ScalarProperty Name="Post_Q09" ColumnName="Post_Q09" />
+                <ScalarProperty Name="Post_Q08" ColumnName="Post_Q08" />
+                <ScalarProperty Name="Post_Q07" ColumnName="Post_Q07" />
+                <ScalarProperty Name="Post_Q06" ColumnName="Post_Q06" />
+                <ScalarProperty Name="Post_Q05" ColumnName="Post_Q05" />
+                <ScalarProperty Name="Post_Q04" ColumnName="Post_Q04" />
+                <ScalarProperty Name="Post_Q03" ColumnName="Post_Q03" />
+                <ScalarProperty Name="Post_Q02" ColumnName="Post_Q02" />
+                <ScalarProperty Name="Post_Q01" ColumnName="Post_Q01" />
+                <ScalarProperty Name="Pre_Q25" ColumnName="Pre_Q25" />
+                <ScalarProperty Name="Pre_Q24" ColumnName="Pre_Q24" />
+                <ScalarProperty Name="Pre_Q23" ColumnName="Pre_Q23" />
+                <ScalarProperty Name="Pre_Q22" ColumnName="Pre_Q22" />
+                <ScalarProperty Name="Pre_Q21" ColumnName="Pre_Q21" />
+                <ScalarProperty Name="Pre_Q20" ColumnName="Pre_Q20" />
+                <ScalarProperty Name="Pre_Q19" ColumnName="Pre_Q19" />
+                <ScalarProperty Name="Pre_Q18" ColumnName="Pre_Q18" />
+                <ScalarProperty Name="Pre_Q17" ColumnName="Pre_Q17" />
+                <ScalarProperty Name="Pre_Q16" ColumnName="Pre_Q16" />
+                <ScalarProperty Name="Pre_Q15" ColumnName="Pre_Q15" />
+                <ScalarProperty Name="Pre_Q14" ColumnName="Pre_Q14" />
+                <ScalarProperty Name="Pre_Q13" ColumnName="Pre_Q13" />
+                <ScalarProperty Name="Pre_Q12" ColumnName="Pre_Q12" />
+                <ScalarProperty Name="Pre_Q11" ColumnName="Pre_Q11" />
+                <ScalarProperty Name="Pre_Q10" ColumnName="Pre_Q10" />
+                <ScalarProperty Name="Pre_Q09" ColumnName="Pre_Q09" />
+                <ScalarProperty Name="Pre_Q08" ColumnName="Pre_Q08" />
+                <ScalarProperty Name="Pre_Q07" ColumnName="Pre_Q07" />
+                <ScalarProperty Name="Pre_Q06" ColumnName="Pre_Q06" />
+                <ScalarProperty Name="Pre_Q05" ColumnName="Pre_Q05" />
+                <ScalarProperty Name="Pre_Q04" ColumnName="Pre_Q04" />
+                <ScalarProperty Name="Pre_Q03" ColumnName="Pre_Q03" />
+                <ScalarProperty Name="Pre_Q02" ColumnName="Pre_Q02" />
+                <ScalarProperty Name="Pre_Q01" ColumnName="Pre_Q01" />
+                <ScalarProperty Name="Post_Assm_Score_Percentage" ColumnName="Post_Assm_Score_Percentage" />
+                <ScalarProperty Name="Post_Assm_Result" ColumnName="Post_Assm_Result" />
+                <ScalarProperty Name="Post_Assm_Attempt" ColumnName="Post_Assm_Attempt" />
+                <ScalarProperty Name="Pre_Assm_Score_Percentage" ColumnName="Pre_Assm_Score_Percentage" />
+                <ScalarProperty Name="Pre_Assm_Result" ColumnName="Pre_Assm_Result" />
+                <ScalarProperty Name="LearnerName" ColumnName="LearnerName" />
+                <ScalarProperty Name="WorkDayId" ColumnName="WorkDayId" />
+                <ScalarProperty Name="SalesId" ColumnName="SalesId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Courses">
+            <EntityTypeMapping TypeName="BCBSModel.Course">
+              <MappingFragment StoreEntitySet="Course">
+                <ScalarProperty Name="TotalContactHours" ColumnName="TotalContactHours" />
+                <ScalarProperty Name="DeliveryMethod" ColumnName="DeliveryMethod" />
+                <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCARFSurveyAnswers">
+            <EntityTypeMapping TypeName="BCBSModel.SCARFSurveyAnswer">
+              <MappingFragment StoreEntitySet="SCARFSurveyAnswer">
+                <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+                <ScalarProperty Name="FairnessText" ColumnName="FairnessText" />
+                <ScalarProperty Name="Fairness" ColumnName="Fairness" />
+                <ScalarProperty Name="RelatednessText" ColumnName="RelatednessText" />
+                <ScalarProperty Name="Relatedness" ColumnName="Relatedness" />
+                <ScalarProperty Name="AutonomyText" ColumnName="AutonomyText" />
+                <ScalarProperty Name="Autonomy" ColumnName="Autonomy" />
+                <ScalarProperty Name="CertaintyText" ColumnName="CertaintyText" />
+                <ScalarProperty Name="Certainty" ColumnName="Certainty" />
+                <ScalarProperty Name="StatusText" ColumnName="StatusText" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="managerEmailID" ColumnName="managerEmailID" />
+                <ScalarProperty Name="managerName" ColumnName="managerName" />
+                <ScalarProperty Name="LearnerName" ColumnName="LearnerName" />
+                <ScalarProperty Name="WorkDayId" ColumnName="WorkDayId" />
+                <ScalarProperty Name="SCARFSurveyId" ColumnName="SCARFSurveyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="U65">
+            <EntityTypeMapping TypeName="BCBSModel.U65">
+              <MappingFragment StoreEntitySet="U65">
+                <ScalarProperty Name="AgencyName" ColumnName="AgencyName" />
+                <ScalarProperty Name="DateofCompletion" ColumnName="DateofCompletion" />
+                <ScalarProperty Name="PassFailStatus" ColumnName="PassFailStatus" />
+                <ScalarProperty Name="AssessmentScore" ColumnName="AssessmentScore" />
+                <ScalarProperty Name="FFMID" ColumnName="FFMID" />
+                <ScalarProperty Name="NationalProducerNumber" ColumnName="NationalProducerNumber" />
+                <ScalarProperty Name="WorkPhoneNumber" ColumnName="WorkPhoneNumber" />
+                <ScalarProperty Name="AgentEmail" ColumnName="AgentEmail" />
+                <ScalarProperty Name="AgentManagingHealth" ColumnName="AgentManagingHealth" />
+                <ScalarProperty Name="AgencyAddress" ColumnName="AgencyAddress" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="U65_Id" ColumnName="U65_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="BCBSModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="TypeOfCredit" ColumnName="TypeOfCredit" />
+                <ScalarProperty Name="MedicalLicenseNo" ColumnName="MedicalLicenseNo" />
+                <ScalarProperty Name="OfficialProviderName" ColumnName="OfficialProviderName" />
+                <ScalarProperty Name="ProviderType" ColumnName="ProviderType" />
+                <ScalarProperty Name="PracticeName" ColumnName="PracticeName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserCourses">
+            <EntityTypeMapping TypeName="BCBSModel.UserCours">
+              <MappingFragment StoreEntitySet="UserCourses">
+                <ScalarProperty Name="NPI" ColumnName="NPI" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMasters">
+            <EntityTypeMapping TypeName="BCBSModel.UserMaster">
+              <MappingFragment StoreEntitySet="UserMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

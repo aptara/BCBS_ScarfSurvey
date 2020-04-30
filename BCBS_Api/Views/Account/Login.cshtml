@@ -1,0 +1,88 @@
+﻿@model BCBS_Api.Models.UserMst
+@{
+    ViewBag.Title = "Sign In";
+}
+<style>
+    body {
+        border-top: 0px;
+    }
+
+    header {
+        display: none;
+    }
+
+    html {
+        background-color: #00adef;
+    }
+
+    input:focus, textarea:focus {
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+</style>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+        {
+            @Html.ValidationSummary(true)
+            <form action="/action_page.php">
+                <div class="logo"><img src="~/Content/images/logo.png" alt="logo"></div>
+                @if (ViewBag.ErrorMessage != null)
+                {
+                <div class="field-validation-error-top" id="ErrorMSg"> @ViewBag.ErrorMessage</div>
+                }
+                <div class="login_fields">
+                    <div class="username">
+                        @Html.TextBoxFor(m => m.LoginUserName, new { @class = "username", autocomplete = "off", @id = "txtUserName", maxlength = 120, placeholder = "Username" })
+                        <div class="field-validation-error" style="display:none" id="ErrorMSgtxtUserName"></div>
+                    </div>
+                    <div class="password">
+                        @Html.PasswordFor(m => m.LoginPassword, new { @class = "password", autocomplete = "off", @id = "txtPassword", maxlength = 120, placeholder = "Password", oninput = "keyPress()" })
+                        <span id="eyeShow" onmouseenter="showPassword()" onmouseleave="hidePassword()" style="display:none"><img id="imgToggle" src="~/Content/images/icon.png"></span>
+                        <div class="field-validation-error" style="display:none" id="ErrorMSgtxtPassword"></div>
+                    </div>
+                </div>
+                <button class="btn" type="submit" title="Sign In" value="Sign In" onclick="return LogInnSubmit();">Sign In</button>
+
+            </form>
+            
+        }
+    </div>
+
+    <script>
+        var pass = document.getElementById('txtPassword');
+        var x = document.getElementById("txtPassword");
+        var imgToggle = document.getElementById('imgToggle')
+
+        function keyPress() {
+            if (x.value == "" || x.value == null || x.value == undefined) {
+                eyeShow.style.display = 'none';
+            }
+            else {
+                eyeShow.style.display = 'block';
+            }
+        }
+        function showPassword() {
+            imgToggle.src = document.URL + "/Content/images/icon_blue.png"
+            x.type = "text";
+        }
+        function hidePassword() {
+            imgToggle.src = document.URL + "/Content/images/icon.png";
+            x.type = "password";
+        }
+    </script>
+
+
+
+</body>
+</html>
+<script src="~/Content/Scripts/Login.js"></script>
+

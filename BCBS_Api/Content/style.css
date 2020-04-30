@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/Roboto-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/Roboto-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/Roboto-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+
+    /* Legacy iOS */
+}
+
+body{
+	background-color:#00adef;
+	font-family: 'Arial';
+}
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 430px;
+    height: 450px;
+    border-radius: 10px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    margin: auto;	
+}
+.logo{
+    width: 123px;
+    display: block;
+    margin: 50px 153px 100px 153px;
+}
+
+.username{
+    margin: 0px auto 0px auto;
+    width: 286px;
+}
+.password{
+    margin: 16px auto 0px auto;
+    width: 286px;
+	position: relative;
+}
+#eyeShow, #eyeHide{
+	position: absolute;
+	top: 25px;
+	right: 30px;
+    cursor: pointer;
+}
+
+
+/* Style all input fields */
+input {
+    width: 285px;
+    padding: 12px;
+    border-radius: 0;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #333333;
+}
+
+
+input[type=submit] {
+    background-color: #0176a2;
+    color: white;
+    width: 284px;
+    height: 43px;
+    font-size: 18px;
+    margin: 0 auto;
+    border-radius: 25px;
+    margin-top: 52px;
+    display: block;
+    cursor: pointer;
+    font-family: Arial;
+    font-weight: normal;
+    line-height: 19px;
+}
+input:-internal-autofill-selected {
+    background-color: #ffffff !important;
+    background-image: none !important;
+     color: #a8a7a7 !important;
+}
+input:focus {
+    outline-offset: 0px;
+}
+.password input{
+   
+    background-image: url("../Content/images/password_icon.png");
+    background-position: right 5px;
+    background-repeat: no-repeat;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight:normal;
+    padding-bottom: 0px;
+	padding-right:22px;
+}
+input[type="submit"], input[type="button"], button {
+     background-color: #0176a2;
+    color: white;
+    width: 284px;
+    height: 43px;
+    font-size: 18px;
+    margin: 0 auto;
+    border-radius: 25px;
+    margin-top: 52px;
+    display: block;
+    cursor: pointer;
+    font-family: Arial;
+    font-weight: normal;
+    line-height: 19px;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+input[type=text]#pwd::-ms-reveal,
+input[type=text]#pwd::-ms-clear
+{
+    display: none;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+input:-internal-autofill-selected {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.username input{
+    background: url(../Content/images/username_icon.png) no-repeat right 10px;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight:normal;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+	padding-right:22px;
+}
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+.field-validation-error-top {
+    color: #ff0000;
+    position: absolute;
+    font-weight: normal;
+    font-size: 15px;
+    width: 430px;
+    text-align: center;
+    margin-top: -45px;
+}
+
+  .error-wrapper { 
+    background: #fff;
+    padding: 35px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1034;
+    color: #fff;
+    text-align: center;
+    box-shadow: 1px 1px 10px 2px #000000;
+}
+h2.error-top { 
+    font-size: 30px;
+    color: #000;
+    background: none;
+    border: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0px #383737;
+    line-height: 32px;
+}
+h1.error-title {
+    font-size: 32px;
+    color: #fff;
+    background: none;
+    border: 0px;
+    margin: 0px;
+    padding: 12px 7px 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    text-shadow: 3px 2px 5px #000;
+    line-height: 45px;
+}
+h1.error-title span { 
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 38px;
+}
+h2.error {
+    font-size: 24px;
+    color: #000;
+    background: none;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 35px;
+}
+.error-user-icon { 
+    margin-top:10px;
+}

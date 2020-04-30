@@ -1,0 +1,62 @@
+﻿@using Kendo.Mvc.UI
+<script type="text/javascript">
+
+    function onDataSourceError(args) {
+        alert("Error occoured to fetch record from server.");
+    }
+</script>
+<h1 style="clear:both;">&nbsp;</h1>
+
+ @(Html.Kendo().Grid<BCBS_Api.Models.Certificate>().Name("coursesGrid")
+        .Columns(columns =>
+        {
+            columns.Bound(p => p.UserCourseId).Width(120)
+               .ClientTemplate(
+               "<a href='/Home/Certificate/#=UserCourseId#' target='_blank' >View Certificate</a>" 
+               ).Title("").Filterable(false);
+            //columns.Bound(p => p.UserName).Width(150);
+            columns.Bound(p => p.CourseTitle).Width(150).Title("Course Name");
+            columns.Bound(p => p.OfficialProviderName).Width(150).Title("Provider’s Name");
+            columns.Bound(p => p.ProviderType).Width(120).Title("Provider Type");
+            columns.Bound(p => p.EmailAddress).Width(150);
+            columns.Bound(p => p.MedicalLicenseNo).Width(200).Title("Medical License Number");
+            columns.Bound(p => p.NPI).Width(250).Title("National Provider Identifier (NPI)");
+            columns.Bound(p => p.PracticeName).Width(150);
+            columns.Bound(p => p.CompletionDateString).Width(150).Title("Completion Date");
+            columns.Bound(p => p.TotalContactHours).Width(180).Title("Total Credit Hours");
+            columns.Bound(p => p.TypeofCredits).Width(150).Title("Type of Credit");
+            columns.Bound(p => p.DeliveryMethod).Width(150);
+        })
+         //.ToolBar(toolbar => toolbar.Create())
+         .ToolBar(commands=>commands.Template(
+             @<text>
+             
+                    <a id="btnExport" href="@Url.Action("ExportData","Home")" >Export Data</a>
+             
+             </text>
+             ))
+
+         //.Groupable()
+         .Pageable(paging => paging.PageSizes(new int[] { 10, 15, 20, 25, 30 }).PreviousNext(true).Refresh(true).Info(true).Input(true).Numeric(true))
+         .Scrollable(s => s.Height("auto"))
+        .Sortable()
+        .Filterable()
+        .Resizable(x=>x.Columns(true))
+        //.Events(e => e.Save("RefreshGrid").DataBound("CourseDataBound").Edit("CourseEdit").Cancel("CourseCancel"))
+            //.Events(ev => ev.Edit("CourseEdit").Save("CouseSave").DataBound("coursesDataBound"))
+        .DataSource(dataSource => dataSource.Ajax()
+            .PageSize(10)
+                     .ServerOperation(false)
+            .Model(model =>
+            {
+                model.Id(p => p.UserCourseId);
+            })
+          .Events(ev => ev.Error("onDataSourceError"))
+         .Read(read => read.Action("GetReportData", "Home"))
+        )
+    )
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnExport").button();
+    });
+</script>

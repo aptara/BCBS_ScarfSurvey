@@ -1,0 +1,30 @@
+﻿@model BCBS_Api.Models.Certificate
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Certificate</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/certificatestyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="cert_container">
+        <div id="cert_title">Certificate of Completion</div>
+        <div id="first_text">This is to certify that</div>
+        <div id="User_name">@Model.OfficialProviderName, @Model.ProviderType</div>
+        <div id="second_text">having Medical License No. <span class="special_font">@Model.MedicalLicenseNo</span> & National Provider Identifier (NPI) <span class="special_font">@Model.NPI</span>
+            <br>
+            from <span class="special_font">@Model.PracticeName</span> has completed the</div>
+        <div id="Course_name">@Model.CourseTitle</div>
+        <div id="Type_Mode"><span class="special_font">@Model.DeliveryMethod course on @Model.CompletionDateString.</span></div>
+        <div id="Last_text"><span class="special_font">@Model.OfficialProviderName</span> is now eligible to apply for <span class="special_font">@Model.TotalContactHours</span> credit hours for<br>
+            <span class="special_font">@Model.TypeofCredits.</span></div>
+    </div>
+</body>
+</html>
+
+

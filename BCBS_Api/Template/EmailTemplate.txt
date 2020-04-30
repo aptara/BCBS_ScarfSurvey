@@ -1,0 +1,9 @@
+﻿<p>Hi @ManagerName,</p><br><br>
+<p>Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</p><br>
+
+<p>Shown below are the responses that your direct report @LearnerName has marked for each of the 5 SCARF</p><br>
+<p>domains. Please review these results and schedule a meaningful conversation with @LearnerName to </p><br>
+<p>discuss their responses; a short guide to using SCARF in meaningful conversation is found <a href="https://intraweb.bcbsnc.com/career/performance_mgmt/documents/1-Improve%20Everyday%20Interactions-1.pdf">here</a></p><br>
+<br><br>
+<p>Thanks,</p><br>
+<p>People Strategies, Blue Cross NC</p>

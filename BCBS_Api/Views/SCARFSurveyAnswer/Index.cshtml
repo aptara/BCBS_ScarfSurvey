@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "SCARF Survey";
+}
+@using Kendo.Mvc.UI
+
+@{
+ if (System.Configuration.ConfigurationManager.AppSettings["ProjectName"] == "SCARF Survey")
+    {
+        <h1 style="clear:both;"> SCARF Survey </h1>
+    }   
+
+}
+
+@(Html.Kendo().Grid<BCBS_Api.Models.SCARFSurveyAnswerModels>().Name("SCARFSurveyAnswerGrid")
+        .ToolBar(commands => commands.Template(@<text><a id="btnSCARFSurveyAnswerExport" href="@Url.Action("GetExporttoSCARFSurveyAnswerData", "SCARFSurveyAnswer")">Export Data In Excel</a></text>))
+            .Columns(columns =>
+            {
+                columns.Bound(p => p.SCARFSurveyId).Hidden(true);
+                columns.Bound(p => p.WorkDayId).Width(300).Title("WorkDay Id");
+                columns.Bound(p => p.LearnerName).Width(300).Title("Learner Name");
+                columns.Bound(p => p.ReportDate).Format("{0:MM/dd/yyyy}").Title("Report Date").Width(180);
+                columns.Bound(p => p.managerName).Title("Manager Name").Width(280);
+                columns.Bound(p => p.managerEmailID).Title("Manager Email Address").Width(280);
+                columns.Bound(p => p.Status).Width(180).Title("Status");
+                columns.Bound(p => p.StatusText).Width(300).Title("Status Text");
+                columns.Bound(p => p.Certainty).Width(180).Title("Certainty");
+                columns.Bound(p => p.CertaintyText).Width(300).Title("Certainty Text");
+                columns.Bound(p => p.Autonomy).Width(180).Title("Autonomy");
+                columns.Bound(p => p.AutonomyText).Width(300).Title("Autonomy Text");
+                columns.Bound(p => p.Relatedness).Width(180).Title("Relatedness");
+                columns.Bound(p => p.RelatednessText).Width(300).Title("Relatedness Text");
+                columns.Bound(p => p.Fairness).Width(180).Title("Fairness");
+                columns.Bound(p => p.FairnessText).Width(300).Title("Fairness Text");
+            })
+            .Pageable(paging => paging.PageSizes(new int[] { 10, 15, 20, 25, 30 }).PreviousNext(true).Refresh(true).Info(true).Input(true).Numeric(true))
+            .Scrollable(s => s.Height("auto"))
+            .Sortable()
+            .Filterable()
+            .Resizable(x => x.Columns(true))
+            .DataSource(dataSource => dataSource.Ajax()
+            .PageSize(10)
+            .ServerOperation(false)
+            .Model(model =>
+            {
+                model.Id(p => p.SCARFSurveyId);
+            })
+              .Events(ev => ev.Error("OnDataSCARFSurveyAnswerGrid"))
+              .Read(read => read.Action("GetSCARFSurveyAnswerData", "SCARFSurveyAnswer"))
+            )
+)
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btnSCARFSurveyAnswerExport").button();
+    });
+
+    function OnDataSCARFSurveyAnswerGrid() {
+        alert("Error occoured to fetch record from server.");
+    }
+</script>
