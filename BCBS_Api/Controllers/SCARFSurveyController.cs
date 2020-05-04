@@ -130,11 +130,11 @@ namespace BCBS_Api.Controllers
 
                             model.ReportDate = model.ReportDate;
                             //string FileSave = ConfigurationManager.AppSettings["FileSave"];
-                            //byte[] buffer = Render(html);
+                            byte[] buffer = Render(html);
                             //string cssFilePath = @"C:/Logs/style.css";
                             using (MemoryStream stream = new System.IO.MemoryStream())
                             {
-                                byte[] buffer;
+                               //  byte[] buffer;
                                 //Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 100f, 0f);
                                 Document pdfDoc = new Document();
                                 PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
@@ -159,7 +159,7 @@ namespace BCBS_Api.Controllers
                                     var physicalPath = Util.ResolveFileName(@"Template\EmailTemplate.txt");
                                     var content = File.ReadAllText(physicalPath);
                                     string emailContent = content.Replace("@LearnerName", model.LearnerName).Replace("@ManagerName", model.managerName);
-                                    //Util.SendMail(OnjSCARFSurvey.managerEmailID, subject, emailContent, AttachmentMemoryStream);
+                                    Util.SendMail(OnjSCARFSurvey.managerEmailID, subject, emailContent, AttachmentMemoryStream);
                             }
                                 #endregion
 

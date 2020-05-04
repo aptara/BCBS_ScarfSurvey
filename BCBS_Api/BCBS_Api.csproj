@@ -976,6 +976,7 @@
     <Content Include="Template\EmailTemplate.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Template\email_template.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

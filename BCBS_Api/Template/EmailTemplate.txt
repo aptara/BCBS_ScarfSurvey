@@ -1,9 +1,36 @@
-﻿<p>Hi @ManagerName,</p><br><br>
-<p>Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</p><br>
+﻿<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-<p>Shown below are the responses that your direct report @LearnerName has marked for each of the 5 SCARF</p><br>
-<p>domains. Please review these results and schedule a meaningful conversation with @LearnerName to </p><br>
-<p>discuss their responses; a short guide to using SCARF in meaningful conversation is found <a href="https://intraweb.bcbsnc.com/career/performance_mgmt/documents/1-Improve%20Everyday%20Interactions-1.pdf">here</a></p><br>
-<br><br>
+    <title>Mailer</title>
+
+    <style type="text/css">
+        html, body {
+            color: #000;
+            font-family: "Roboto";
+            font-size: 15px;
+			margin:10px;
+        }
+
+        p {
+            margin: 0px;
+            padding: 0px;
+        }	
+    </style>
+
+
+
+
+</head>
+<p style="margin-top:20px; font-size:16px;">Hi @ManagerName,</p><br><br>
+<p style="margin-top:40px;">Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</p>
+
+<p style="margin-top:20px; line-height:22px;">Shown below are the responses that your direct report @LearnerName has marked for each of the 5 SCARF</p>
+<p style="margin-top:40px; line-height:22px; font-size:16px;">domains. Please review these results and schedule a meaningful conversation with @LearnerName to </p>
+<p>discuss their responses; a short guide to using SCARF in meaningful conversation is found here</p>
+<br>
 <p>Thanks,</p><br>
 <p>People Strategies, Blue Cross NC</p>
