@@ -36,7 +36,7 @@
 
 <div style="line-height:24px; font-size:16px;"> <span style="color:#00adef;">Please</span> review these results and schedule a meaningful conversation with @LearnerName to </div>
 
-<div style="line-height:24px;">discuss their responses; <span style="color:#00adef;">a short guide to using SCARF in meaningful conversation is found</span> <a href="#" style="color:#038dc1;">here</a></div>
+<div style="line-height:24px;">discuss their responses; <span style="color:#00adef;">a short guide to using SCARF in meaningful conversation is found</span> <a href="#" style="color:#038dc1;">here</a>.</div>
 
 <div style="margin-top:40px; line-height:24px; font-size:16px;">Thanks,</div>
 
