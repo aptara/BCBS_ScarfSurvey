@@ -32,8 +32,7 @@
         }
 
         table img {
-            width: 18px;
-            height: 10px;
+            width: 22px;
             display: block;
             position: relative;
             left: 5px;
@@ -68,7 +67,7 @@ background: linear-gradient(to bottom, #000b41 0%,#002063 100%); /* W3C, IE10+, 
 
 
             <div>
-                <div style="margin:0 auto; text-align:center; position:relative; z-index:4; left:-5px; top:-90px;">
+                <div style="margin:0 auto; text-align:center; position:relative; z-index:4; left:10px; top:-90px;">
                     <img src="@imagePath\header_icon1.png" alt="icon1" style="width:34px; height:32px;" />
                     <img src="@imagePath\header_icon2.png" alt="icon2" style="width:34px; height:32px;" />
                     <img src="@imagePath\header_icon3.png" alt="icon3" style="width:34px; height:32px;" />
@@ -81,173 +80,176 @@ background: linear-gradient(to bottom, #000b41 0%,#002063 100%); /* W3C, IE10+, 
 
         <div style="width:100%;">
 
-            <table style="border:0px; border-collapse: collapse; width:767px;">
+            <table style="border:0px; border-collapse: collapse; width:100%;">
                 <tr>
-                    <td style="width:354px; margin:0px 0px 0px 20px; position:relative; bottom:50px;">
+                    <td style="width:100%; margin:0px 0px 0px 20px; position:relative;">
+
+                        <div style="position:relative; left:120px; top:20px;">
+
+                            <div style="background-image: url('@imagePath/arrow_bg.png'); width: 640px; font-size:12px; color:#ffffff; height:40px; position: relative;  left: 170px; top: 0px; padding: 16px 50px 0px 130px; text-align:left">
+                                <b>RATING</b>
+                            </div>
 
 
-                        <div style="background-image: url('@imagePath/arrow_bg.png'); width: 310px; font-size:12px; color:#ffffff; height:45px; position: relative;  left: 110px; top: 0px; padding: 19px 50px 0px 150px; text-align:left">
-                            <b>RATING</b>
+                            <table style="font-family: arial, sans-serif;border-collapse: collapse; width:70%; position: relative; margin-top:5px; left:200px;">
+                                <tr>
+                                    <th style="font-size:12px; text-align: center;background-color: #01184c;color: #ffffff;text-align: left; height: 25px; width: 115px; border:0.4px solid #fff;">&nbsp;&nbsp;PARAMETER</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #992833;color: #ffffff; height: 25px;">-5</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #992833;color: #ffffff; height: 25px;">-4</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #992833;color: #ffffff; height: 25px;">-3</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #992833;color: #ffffff; height: 25px;">-2</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #992833;color: #ffffff; height: 25px;">-1</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #5f5e5e;color: #ffffff; font-size: 12px; width:30px; height: 25px;">NA</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #0070c0;color: #ffffff; height: 25px;">1</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #0070c0;color: #ffffff; height: 25px;">2</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #0070c0;color: #ffffff; height: 25px;">3</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #0070c0;color: #ffffff; height: 25px;">4</th>
+                                    <th style="font-size:12px; text-align: center;background-color: #0070c0;color: #ffffff; height: 25px;">5</th>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:12px;">&nbsp;&nbsp;STATUS</td>
+                                    <td style="@(Model.Status == "-5" ? "background-color: #ffeaec;background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;")"><img src="@(Model.Status == "-5" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "-4" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Status == "-4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "-3" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Status == "-3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "-2" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Status == "-2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "-1" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Status == "-1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "NA" ? "background-color: #ebebeb;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #ebebeb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Status == "NA" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "1" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Status == "1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "2" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #d8eefd;color: #ffffff;width: 30px height:25px;;")"><img src="@(Model.Status == "2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "3" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #d8eefd;color: #ffffff;width: 30px height:25px;;")"><img src="@(Model.Status == "3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "4" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Status == "4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Status == "5" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Status == "5" ? selectedImagePath : "")" alt="logo" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:12px;">&nbsp;&nbsp;CERTANITY</td>
+                                    <td style="@(Model.Certainty == "-5" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Certainty == "-5" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "-4" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Certainty == "-4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "-3" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Certainty == "-3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "-2" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Certainty == "-2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "-1" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Certainty == "-1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "NA" ? "background-color: #dbdbdb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #dbdbdb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Certainty == "NA" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "1" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Certainty == "1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "2" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Certainty == "2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "3" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Certainty == "3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "4" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Certainty == "4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Certainty == "5" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Certainty == "5" ? selectedImagePath : "")" alt="logo" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:12px;">&nbsp;&nbsp;AUTONOMY</td>
+                                    <td style="@(Model.Autonomy == "-5" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "-5" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "-4" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "-4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "-3" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "-3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "-2" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px; height:25px; height:25px;")"><img src="@(Model.Autonomy == "-2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "-1" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Autonomy == "-1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "NA" ? "background-color: #ebebeb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #ebebeb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "NA" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "1" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "2" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "3" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "4" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Autonomy == "5" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Autonomy == "5" ? selectedImagePath : "")" alt="logo" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:12px;">&nbsp;&nbsp;RELATEDNESS</td>
+                                    <td style="@(Model.Relatedness == "-5" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "-5" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "-4" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "-4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "-3" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "-3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "-2" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "-2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "-1" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "-1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "NA" ? "background-color: #dbdbdb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #dbdbdb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "NA" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "1" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "2" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "3" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Relatedness == "3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "4" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px; height:25px; height:25px;")"><img src="@(Model.Relatedness == "4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Relatedness == "5" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Relatedness == "5" ? selectedImagePath : "")" alt="logo" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:12px;">&nbsp;&nbsp;FAIRNESS</td>
+                                    <td style="@(Model.Fairness == "-5" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Fairness == "-5" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "-4" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Fairness == "-4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "-3" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Fairness == "-3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "-2" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Fairness == "-2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "-1" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px; height:25px;")"><img src="@(Model.Fairness == "-1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "NA" ? "background-color: #ebebeb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #ebebeb;color: #ffffff;width: 30px;  height:25px;")"><img src="@(Model.Fairness == "NA" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "1" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Fairness == "1" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "2" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Fairness == "2" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "3" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Fairness == "3" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "4" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Fairness == "4" ? selectedImagePath : "")" alt="logo" /></td>
+                                    <td style="@(Model.Fairness == "5" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px; height:25px;")"><img src="@(Model.Fairness == "5" ? selectedImagePath : "")" alt="logo" /></td>
+                                </tr>
+                            </table>
+
+                            <div style="position:relative; top:15px; bottom:100px;">
+                                <div style="font-family: calibri; font-size:12px; bottom:3px;  position: relative;">SCARF Survey Results for <span id="learner_name" style="color: #0070c0; padding-left: 5px; font-weight: bold;">@Model.LearnerName</span></div>
+                                <div style="color: #000000; font-family: calibri; font-size:12px; position: relative;">Date of Survey: <span id="learner_date">@DateTime.Now.ToShortDateString()</span></div>
+                            </div>
+
                         </div>
-
-
-
-                        <table style="font-family: arial, sans-serif;border-collapse: collapse; height: 300px;position: relative; margin-top:10px;">
-                            <tr>
-                                <th style="font-size:10px; text-align: center;background-color: #01184c;color: #ffffff;text-align: left; height: 22px; width: 115px; border:0.4px solid #fff;">&nbsp;&nbsp;PARAMETER</th>
-                                <th style="font-size:10px; text-align: center;background-color: #992833;color: #ffffff;">-5</th>
-                                <th style="font-size:10px; text-align: center;background-color: #992833;color: #ffffff;">-4</th>
-                                <th style="font-size:10px; text-align: center;background-color: #992833;color: #ffffff;">-3</th>
-                                <th style="font-size:10px; text-align: center;background-color: #992833;color: #ffffff;">-2</th>
-                                <th style="font-size:10px; text-align: center;background-color: #992833;color: #ffffff;">-1</th>
-                                <th style="font-size:10px; text-align: center;background-color: #5f5e5e;color: #ffffff; font-size: 12px; width:30px;">NA</th>
-                                <th style="font-size:10px; text-align: center;background-color: #0070c0;color: #ffffff;">1</th>
-                                <th style="font-size:10px; text-align: center;background-color: #0070c0;color: #ffffff;">2</th>
-                                <th style="font-size:10px; text-align: center;background-color: #0070c0;color: #ffffff;">3</th>
-                                <th style="font-size:10px; text-align: center;background-color: #0070c0;color: #ffffff;">4</th>
-                                <th style="font-size:10px; text-align: center;background-color: #0070c0;color: #ffffff;">5</th>
-                            </tr>
-                            <tr>
-                                <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:10px;">&nbsp;&nbsp;STATUS</td>
-                                <td style="@(Model.Status == "-5" ? "background-color: #ffeaec;background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;")"><img src="@(Model.Status == "-5" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "-4" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Status == "-4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "-3" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Status == "-3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "-2" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Status == "-2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "-1" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center; " : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Status == "-1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "NA" ? "background-color: #ebebeb;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #ebebeb;color: #ffffff;width: 30px;")"><img src="@(Model.Status == "NA" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "1" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Status == "1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "2" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Status == "2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "3" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Status == "3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "4" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Status == "4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Status == "5" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center; " : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Status == "5" ? selectedImagePath : "")" alt="logo" /></td>
-                            </tr>
-                            <tr>
-                                <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:10px;">&nbsp;&nbsp;CERTANITY</td>
-                                <td style="@(Model.Certainty == "-5" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Certainty == "-5" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "-4" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Certainty == "-4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "-3" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Certainty == "-3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "-2" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Certainty == "-2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "-1" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position: center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Certainty == "-1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "NA" ? "background-color: #dbdbdb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #dbdbdb;color: #ffffff;width: 30px;")"><img src="@(Model.Certainty == "NA" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "1" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Certainty == "1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "2" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Certainty == "2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "3" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Certainty == "3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "4" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Certainty == "4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Certainty == "5" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Certainty == "5" ? selectedImagePath : "")" alt="logo" /></td>
-                            </tr>
-                            <tr>
-                                <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:10px;">&nbsp;&nbsp;AUTONOMY</td>
-                                <td style="@(Model.Autonomy == "-5" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Autonomy == "-5" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "-4" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Autonomy == "-4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "-3" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Autonomy == "-3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "-2" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Autonomy == "-2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "-1" ? "background-color: #ffeaec; background-repeat: no-repeat; background-position: center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Autonomy == "-1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "NA" ? "background-color: #ebebeb;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #ebebeb;color: #ffffff;width: 30px;")"><img src="@(Model.Autonomy == "NA" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "1" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Autonomy == "1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "2" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Autonomy == "2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "3" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Autonomy == "3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "4" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Autonomy == "4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Autonomy == "5" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position: center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Autonomy == "5" ? selectedImagePath : "")" alt="logo" /></td>
-                            </tr>
-                            <tr>
-                                <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:10px;">&nbsp;&nbsp;RELATEDNESS</td>
-                                <td style="@(Model.Relatedness == "-5" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Relatedness == "-5" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "-4" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Relatedness == "-4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "-3" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Relatedness == "-3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "-2" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Relatedness == "-2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "-1" ? "background-color: #fbdcdf; background-repeat: no-repeat; background-position:center center;" : "background-color: #fbdcdf;width: 30px;")"><img src="@(Model.Relatedness == "-1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "NA" ? "background-color: #dbdbdb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #dbdbdb;color: #ffffff;width: 30px;")"><img src="@(Model.Relatedness == "NA" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "1" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Relatedness == "1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "2" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Relatedness == "2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "3" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Relatedness == "3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "4" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Relatedness == "4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Relatedness == "5" ? "background-color: #b5dffb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #b5dffb;color: #ffffff;width: 30px;")"><img src="@(Model.Relatedness == "5" ? selectedImagePath : "")" alt="logo" /></td>
-                            </tr>
-                            <tr>
-                                <td style="background-color: #03588d;color: #ffffff;font-weight: bold;font-size: 12px; border:0.4px solid #fff; height: 22px; font-size:10px;">&nbsp;&nbsp;FAIRNESS</td>
-                                <td style="@(Model.Fairness == "-5" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Fairness == "-5" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "-4" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Fairness == "-4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "-3" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Fairness == "-3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "-2" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Fairness == "-2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "-1" ? " background-color: #ffeaec; background-repeat: no-repeat; background-position:center center;" : "background-color: #ffeaec;width: 30px;")"><img src="@(Model.Fairness == "-1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "NA" ? "background-color: #ebebeb;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #ebebeb;color: #ffffff;width: 30px; ")"><img src="@(Model.Fairness == "NA" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "1" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Fairness == "1" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "2" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Fairness == "2" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "3" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Fairness == "3" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "4" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Fairness == "4" ? selectedImagePath : "")" alt="logo" /></td>
-                                <td style="@(Model.Fairness == "5" ? "background-color: #d8eefd;color: #ffffff; background-repeat: no-repeat; background-position:center center;" : "background-color: #d8eefd;color: #ffffff;width: 30px;")"><img src="@(Model.Fairness == "5" ? selectedImagePath : "")" alt="logo" /></td>
-                            </tr>
-                        </table>
-
-                        <div style="position:relative; top:15px;">
-                            <div style="font-family: calibri; font-size:12px; bottom:3px;  position: relative;">SCARF Survey Results for <span id="learner_name" style="color: #0070c0; padding-left: 5px; font-weight: bold;">@Model.LearnerName</span></div>
-                            <div style="color: #000000; font-family: calibri; font-size:12px; position: relative;">Date of Survey: <span id="learner_date">@DateTime.Now.ToShortDateString()</span></div>
-                        </div>
-
 
                     </td>
+                </tr>
 
-                    <td style="width:5px;"></td>
+                <tr>
+                    <td style="height:50px;"></td>
+                    </tr>
 
-                    <td style="width:283px; padding:0px; margin:0px 20px 0px 0px; position:relative; background-color:#cccccc;">
+                <tr>
+                    <td style="width:100%; padding:0px; margin:0px 20px 0px 0px; position:relative; background-color:#cccccc;">
 
 
-                        <div class="right_wrap" style="background-color: #efefef; position: relative; padding:25px 15px; right: 0px; top: 0px;">
-                            <h3 style="font-size: 12px; font-weight: bold; color: #03588d; font-family: calibri; text-align: center; padding: 0px; margin: 15px 0px; text-transform: uppercase;"><span id="learner_name1" style="font-size: 14px; font-weight: bold; color: #03588d; font-family: calibri; text-transform: uppercase;">@Model.LearnerName.ToUpper()</span>'S COMMENTS</h3>
+                        <div class="right_wrap" style="background-color: #efefef; position: relative; padding:15px 15px; right: 0px; top: 0px;">
+                            <h3 style="font-size: 16px; font-weight: bold; color: #03588d; font-family: calibri; text-align: center; padding: 0px; margin: 15px 0px; text-transform: uppercase;"><span id="learner_name1" style="font-size: 16px; font-weight: bold; color: #03588d; font-family: calibri; text-transform: uppercase;">@Model.LearnerName.ToUpper()</span>'S COMMENTS</h3>
 
                             <div class="status wrap" style="border-bottom: 2px solid #cccccc; padding: 5px 0px;">
-                                <span style="color: #03588d; font-weight: bold; position:relative; font-size: 12px; font-family: calibri; line-height: 25px;">STATUS</span>
-                                <div id="status_description" style="font-size: 11px; font-family: calibri; line-height: 14px;">
+                                <p style="color: #03588d; font-weight: bold; margin:0px; padding:0px 0px 2px 0px; position:relative; font-size: 13px; font-family: calibri; line-height: 25px;">STATUS</p>
+                                <div id="status_description" style="font-size: 12px; font-family: calibri; line-height: 14px;">
                                     @Model.StatusText
                                 </div>
                             </div>
 
-                            <div style="height:0.8px; background-color:#cccccc; padding:2px; width:100%; margin:30px 0px;"></div>
+                            <div style="height:0.8px; background-color:#cccccc; padding:2px; width:100%; margin:50px 0px;"></div>
 
                             <div class="certanity wrap" style="border-bottom: 2px solid #cccccc; padding: 5px 0px;">
-                                <span style="color: #03588d; font-weight: bold; position:relative; bottom:10px; font-size: 12px; font-family: calibri; line-height: 25px;">CERTANITY</span>
-                                <div id="certanity_description" style="font-size: 11px; font-family: calibri; line-height: 14px; ">
+                                <p style="color: #03588d; font-weight: bold; margin:0px; padding:0px 0px 2px 0px; position:relative; font-size: 13px; font-family: calibri; line-height: 25px;">CERTANITY</p>
+                                <div id="certanity_description" style="font-size: 12px; font-family: calibri; line-height: 14px; ">
                                     @Model.CertaintyText
                                 </div>
                             </div>
 
-                            <div style="height:0.8px; background-color:#cccccc; padding:2px; width:100%; margin:30px 0px;"></div>
+                            <div style="height:0.8px; background-color:#cccccc; padding:2px; width:100%; margin:50px 0px;"></div>
 
 
                             <div class="autonomy wrap" style="border-bottom: 2px solid #cccccc; padding: 5px 0px;">
-                                <span style="color: #03588d; font-weight: bold;  position:relative; font-size: 12px; font-family: calibri; line-height: 25px;">AUTONOMY</span>
-                                <div id="autonomy_description" style="font-size: 11px; font-family: calibri; line-height: 14px;">
+                                <p style="color: #03588d; font-weight: bold;  position:relative; font-size: 13px; margin:0px; padding:0px 0px 2px 0px; font-family: calibri; line-height: 25px;">AUTONOMY</p>
+                                <div id="autonomy_description" style="font-size: 12px; font-family: calibri; line-height: 14px;">
                                     @Model.AutonomyText
                                 </div>
                             </div>
 
-                            <div style="height:0.8px; background-color:#cccccc; padding:2px; width:100%; margin:30px 0px"></div>
+                            <div style="height:0.8px; background-color:#cccccc; padding:2px; width:100%; margin:50px 0px"></div>
 
                             <div class="relatedness wrap" style="border-bottom: 2px solid #cccccc; padding: 5px 0px;">
-                                <span style="color: #03588d; font-weight: bold; font-size: 12px;  position:relative;  font-family: calibri; line-height: 25px;">RELATEDNESS</span>
-                                <div id="relatedness_description" style="font-size: 11px; font-family: calibri; line-height: 14px;">
+                                <p style="color: #03588d; font-weight: bold; font-size: 13px; margin:0px; padding:0px 0px 2px 0px;  position:relative;  font-family: calibri; line-height: 25px;">RELATEDNESS</p>
+                                <div id="relatedness_description" style="font-size: 12px; font-family: calibri; line-height: 14px;">
                                     @Model.RelatednessText
                                 </div>
                             </div>
 
-                            <div style="height:0.8px; background-color:#cccccc; padding:2px; width:100%; margin:30px 0px"></div>
+                            <div style="height:0.8px; background-color:#cccccc; padding:2px; width:100%; margin:50px 0px"></div>
 
                             <div class="fairness wrap" style="border-bottom: 2px solid #cccccc; padding: 5px 0px;">
-                                <span style="color: #03588d; font-weight: bold; font-size: 12px;  position:relative;  font-family: calibri; line-height: 25px;">FAIRNESS</span>
-                                <div id="fairness_description" style="font-size: 11px; font-family: calibri; line-height: 14px; position:relative; top:1px;">
+                                <p style="color: #03588d; font-weight: bold; font-size: 13px;margin:0px; padding:0px 0px 5px 0px; position:relative;  font-family: calibri; line-height: 25px;">FAIRNESS</p>
+                                <div id="fairness_description" style="font-size: 12px; font-family: calibri; line-height: 14px; position:relative; top:1px;">
                                     @Model.FairnessText
                                 </div>
                             </div>
                         </div>
 
                     </td>
-
-
                 </tr>
             </table>
         </div>
 
-        <img src="@imagePath\btm_img.jpg" alt="icon1" style="width:767px; height:30px;" />
+        <img src="@imagePath\btm_img.jpg" alt="icon1" style="width:740px; height:30px;" />
 
     </div>
 </body>
