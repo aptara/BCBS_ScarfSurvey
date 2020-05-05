@@ -28,7 +28,7 @@
 <p style="margin-top:20px; font-size:16px;">Hi @ManagerName,</p><br><br>
 <p style="margin-top:40px;">Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</p>
 
-<p style="margin-top:20px; line-height:22px;">Shown below are the responses that your direct report @LearnerName has marked for each of the 5 SCARF</p>
+<p style="margin-top:20px; line-height:22px;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF</p>
 <p style="margin-top:40px; line-height:22px; font-size:16px;">domains. Please review these results and schedule a meaningful conversation with @LearnerName to </p>
 <p>discuss their responses; a short guide to using SCARF in meaningful conversation is found here</p>
 <br>
