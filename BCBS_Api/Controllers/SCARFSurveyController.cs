@@ -130,10 +130,8 @@ namespace BCBS_Api.Controllers
                             model.ReportDate = model.ReportDate;                            
                             byte[] buffer = Render(html);                            
                             using (MemoryStream stream = new System.IO.MemoryStream())
-                            {
-                                Document pdfDoc = new Document(PageSize.A4.Rotate(), 10f, 10f, 100f, 0f);                                
-                                //Document pdfDoc = new Document(PageSize.A4_LANDSCAPE, 10f, 10f, 100f, 0f);                                
-                                //Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 100f, 0f);                                
+                            {                               
+                                Document pdfDoc = new Document(PageSize.A4, 20f, 20f, 20f, 20f);                             
                                 PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
                                 writer.CloseStream = false;
                                 pdfDoc.Open();                                
@@ -145,8 +143,8 @@ namespace BCBS_Api.Controllers
                                 Attachment AttachmentMemoryStream = new Attachment(new MemoryStream(buffer), "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF");
                                
                                 //File Write in Folder With Out Mail 
-                                //string FilePathandName = @"C:\Logs\" + "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF";
-                                //File.WriteAllBytes(FilePathandName, buffer);
+                                string FilePathandName = @"C:\Logs\" + "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF";
+                                File.WriteAllBytes(FilePathandName, buffer);
 
                                 #region Mail Sending
                                     var subject = ConfigurationManager.AppSettings["MailSubject"] + model.LearnerName;
