@@ -1,4 +1,6 @@
-﻿<head>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,12 +27,20 @@
 
 
 </head>
-<p style="margin-top:20px; font-size:16px;">Hi @ManagerName,</p><br><br>
-<p style="margin-top:40px;">Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</p>
+<body>
+<div style="margin-top:20px; font-size:16px;">Hi @ManagerName,</div>
 
-<p style="margin-top:20px; line-height:22px;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF</p>
-<p style="margin-top:40px; line-height:22px; font-size:16px;">domains. Please review these results and schedule a meaningful conversation with @LearnerName to </p>
-<p>discuss their responses; a short guide to using SCARF in meaningful conversation is found here</p>
-<br>
-<p>Thanks,</p><br>
-<p>People Strategies, Blue Cross NC</p>
+<div style="margin-top:40px;">Thank you for encouraging your team to <span style="color:#00adef;">use</span> the Blue Cross NC SCARF <span style="color:#00adef;">tool</span>.</div>
+
+<div style="margin-top:20px; line-height:24px;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF <span  style="color:#00adef;">domains</span>.</div>
+
+<div style="line-height:24px; font-size:16px;"> <span style="color:#00adef;">Please</span> review these results and schedule a meaningful conversation with @LearnerName to </div>
+
+<div style="line-height:24px;">discuss their responses; <span style="color:#00adef;">a short guide to using SCARF in meaningful conversation is found</span> <a href="#" style="color:#038dc1;">here</a></div>
+
+<div style="margin-top:40px; line-height:24px; font-size:16px;">Thanks,</div>
+
+<div>People Strategies, Blue Cross NC</div>
+
+</body>
+</html>
