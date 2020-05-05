@@ -28,19 +28,19 @@
 
 </head>
 <body>
-<div style="margin-top:20px; font-size:16px;">Hi @ManagerName,</div>
+<div style="margin-top:20px; font-size:16px; word-spacing: 3px;">Hi @ManagerName,</div>
 
-<div style="margin-top:40px;">Thank you for encouraging your team to <span style="color:#00adef;">use</span> the Blue Cross NC SCARF <span style="color:#00adef;">tool</span>.</div>
+<div style="margin-top:35px; word-spacing: 3px;">Thank you for encouraging your team to <span style="color:#00adef;">use</span> the Blue Cross NC SCARF <span style="color:#00adef;">tool</span>.</div>
 
-<div style="margin-top:20px; line-height:24px;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF <span  style="color:#00adef;">domains</span>.</div>
+<div style="margin-top:20px; line-height:20px; word-spacing: 3px;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF <span  style="color:#00adef;">domains</span>.</div>
 
-<div style="line-height:24px; font-size:16px;"> <span style="color:#00adef;">Please</span> review these results and schedule a meaningful conversation with @LearnerName to </div>
+<div style="line-height:20px; font-size:16px; word-spacing: 3px;"> <span style="color:#00adef;">Please</span> review these results and schedule a meaningful conversation with @LearnerName to </div>
 
-<div style="line-height:24px;">discuss their responses; <span style="color:#00adef;">a short guide to using SCARF in meaningful conversation is found</span> <a href="https://intraweb.bcbsnc.com/career/performance_mgmt/documents/1-Improve%20Everyday%20Interactions-1.pdf" style="color:#038dc1;">here</a>.</div>
+<div style="line-height:20px; word-spacing: 3px;">discuss their responses; <span style="color:#00adef;">a short guide to using SCARF in meaningful conversation is found</span> <a href="https://intraweb.bcbsnc.com/career/performance_mgmt/documents/1-Improve%20Everyday%20Interactions-1.pdf" style="color:#038dc1;">here</a>.</div>
 
-<div style="margin-top:40px; line-height:24px; font-size:16px;">Thanks,</div>
+<div style="margin-top:35px; line-height:24px; font-size:16px; word-spacing: 3px;">Thanks,</div>
 
-<div>People Strategies, Blue Cross NC</div>
+<div style="word-spacing: 3px;">People Strategies, Blue Cross NC</div>
 
 </body>
 </html>
