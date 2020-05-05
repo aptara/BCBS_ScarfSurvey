@@ -126,33 +126,25 @@ namespace BCBS_Api.Controllers
                         {
                             model.managerName = OnjSCARFSurvey.managerName;
                             string html = RenderViewToString("SCARFSurveyAnswer", "~/views/Shared/_SCARFSurveyAnswerPDF.cshtml", model);
-                            string myf = System.Web.Hosting.HostingEnvironment.MapPath("/Content/PDF.CSS");
-
-                            model.ReportDate = model.ReportDate;
-                            //string FileSave = ConfigurationManager.AppSettings["FileSave"];
-                            byte[] buffer = Render(html);
-                            //string cssFilePath = @"C:/Logs/style.css";
+                          
+                            model.ReportDate = model.ReportDate;                            
+                            byte[] buffer = Render(html);                            
                             using (MemoryStream stream = new System.IO.MemoryStream())
-                            {
-                               //  byte[] buffer;
-                                Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 100f, 0f);
-                                //Document pdfDoc = new Document();
+                            {                               
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 100f, 0f);                                
                                 PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
                                 writer.CloseStream = false;
-                                pdfDoc.Open();
-                                
-                                StringReader sr = new StringReader(html);
-                                //using (var msCss = new MemoryStream(Encoding.UTF8.GetBytes(css ?? String.Empty)))
-                                //using (var msHtml = new MemoryStream(Encoding.UTF8.GetBytes(html)))
+                                pdfDoc.Open();                                
+                                StringReader sr = new StringReader(html);                               
                                 XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-
                                 pdfDoc.Close();
                                 buffer = stream.ToArray();
                                
                                 Attachment AttachmentMemoryStream = new Attachment(new MemoryStream(buffer), "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF");
                                
-                                string FilePathandName = @"C:\Logs\" + "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF";
-                                File.WriteAllBytes(FilePathandName, buffer);
+                                //File Write in Folder With Out Mail 
+                                //string FilePathandName = @"C:\Logs\" + "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF";
+                                //File.WriteAllBytes(FilePathandName, buffer);
 
                                 #region Mail Sending
                                     var subject = ConfigurationManager.AppSettings["MailSubject"] + model.LearnerName;
