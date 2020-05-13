@@ -28,19 +28,19 @@
 
 </head>
 <body>
-<div style="margin-top:20px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Hi @ManagerName,</div>
+<div style="font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Hi @ManagerName,</div>
 
-<div style="margin-top:35px; word-spacing: 2px; font-size:11px; color:#000000; font-family: Arial, Helvetica, sans-serif;">Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</div>
+<div style="margin-top:12px; word-spacing: 2px; font-size:11px; color:#000000; font-family: Arial, Helvetica, sans-serif;">Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</div>
 
-<div style="margin-top:20px; line-height:20px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF domains.</div>
+<div style="margin-top:8px; line-height:20px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF domains.</div>
 
 <div style="line-height:20px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Please review these results and schedule a meaningful conversation with @LearnerName to </div>
 
 <div style="line-height:20px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">discuss their responses; a short guide to using SCARF in meaningful conversation is found <a href="https://intraweb.bcbsnc.com/career/performance_mgmt/documents/1-Improve%20Everyday%20Interactions-1.pdf" style="color:#038dc1; font-size:11px;">here</a>.</div>
 
-<div style="margin-top:35px; line-height:24px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Thanks,</div>
+<div style="margin-top:4px; line-height:24px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Thanks,</div>
 
-<div style="font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">People Strategies, Blue Cross NC</div>
+<div style="font-size:11px; margin-top:3px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">People Strategies, Blue Cross NC</div>
 
 </body>
 </html>
