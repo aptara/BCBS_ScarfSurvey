@@ -507,7 +507,6 @@
     <Content Include="Content\fonts\Roboto-Regular.woff" />
     <Content Include="Content\fonts\Roboto-Regular.woff2" />
     <Content Include="Content\fonts\Roboto-Thin.ttf" />
-    <Content Include="Content\images\Thumbs.db" />
     <None Include="Properties\PublishProfiles\BCBC.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\SCARFSurvey.pubxml" />

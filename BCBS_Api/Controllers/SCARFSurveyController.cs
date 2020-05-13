@@ -143,8 +143,8 @@ namespace BCBS_Api.Controllers
                                 Attachment AttachmentMemoryStream = new Attachment(new MemoryStream(buffer), "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF");
                                
                                 //File Write in Folder With Out Mail 
-                                string FilePathandName = @"C:\Logs\" + "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF";
-                                File.WriteAllBytes(FilePathandName, buffer);
+                                //string FilePathandName = @"C:\Logs\" + "SCARFSurveyAnswer" + SCARFSurveyModel.SCARFSurveyId + ".PDF";
+                                //File.WriteAllBytes(FilePathandName, buffer);
 
                                 #region Mail Sending
                                     var subject = ConfigurationManager.AppSettings["MailSubject"] + model.LearnerName;
