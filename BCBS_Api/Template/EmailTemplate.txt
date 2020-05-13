@@ -13,7 +13,7 @@
         html, body {
             color: #000;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 11px;
+            font-size: 14px;
 			margin:10px;
         }
 
@@ -28,19 +28,19 @@
 
 </head>
 <body>
-<div style="font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Hi @ManagerName,</div>
+<div style="font-size:14.5px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Hi @ManagerName,</div>
 
-<div style="margin-top:12px; word-spacing: 2px; font-size:11px; color:#000000; font-family: Arial, Helvetica, sans-serif;">Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</div>
+<div style="margin-top:15px; word-spacing: 2px; font-size:14.5px; color:#000000; font-family: Arial, Helvetica, sans-serif;">Thank you for encouraging your team to use the Blue Cross NC SCARF tool.</div>
 
-<div style="margin-top:8px; line-height:20px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF domains.</div>
+<div style="margin-top:9px; line-height:30px; font-size:14.5px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Attached are the responses that your direct report @LearnerName has marked for each of the 5 SCARF domains.</div>
 
-<div style="line-height:20px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Please review these results and schedule a meaningful conversation with @LearnerName to </div>
+<div style="line-height:30px; font-size:14.5px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Please review these results and schedule a meaningful conversation with @LearnerName to </div>
 
-<div style="line-height:20px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">discuss their responses; a short guide to using SCARF in meaningful conversation is found <a href="https://intraweb.bcbsnc.com/career/performance_mgmt/documents/1-Improve%20Everyday%20Interactions-1.pdf" style="color:#038dc1; font-size:11px;">here</a>.</div>
+<div style="line-height:30px; font-size:14.5px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">discuss their responses; a short guide to using SCARF in meaningful conversation is found <a href="https://intraweb.bcbsnc.com/career/performance_mgmt/documents/1-Improve%20Everyday%20Interactions-1.pdf" style="color:#038dc1; font-size:14.5px;">here</a>.</div>
 
-<div style="margin-top:4px; line-height:24px; font-size:11px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Thanks,</div>
+<div style="margin-top:9px; line-height:24px; font-size:14.5px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">Thanks,</div>
 
-<div style="font-size:11px; margin-top:3px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">People Strategies, Blue Cross NC</div>
+<div style="font-size:14.5px; margin-top:10px; color:#000000; word-spacing: 2px; font-family: Arial, Helvetica, sans-serif;">People Strategies, Blue Cross NC</div>
 
 </body>
 </html>
