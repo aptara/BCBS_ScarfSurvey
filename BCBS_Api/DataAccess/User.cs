@@ -14,6 +14,11 @@ namespace BCBS_Api.DataAccess
     
     public partial class User
     {
+        public User()
+        {
+            this.UserCourses = new HashSet<UserCours>();
+        }
+    
         public System.Guid Id { get; set; }
         public string PracticeName { get; set; }
         public string ProviderType { get; set; }
@@ -22,5 +27,7 @@ namespace BCBS_Api.DataAccess
         public string TypeOfCredit { get; set; }
         public string EmailAddress { get; set; }
         public string UserName { get; set; }
+    
+        public virtual ICollection<UserCours> UserCourses { get; set; }
     }
 }

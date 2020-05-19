@@ -22,7 +22,7 @@ namespace BCBS_Api.DataAccess
                 using (BCBSEntities dbObject = new BCBSEntities())
                 {
 
-                    var UserMstDBList = dbObject.UserMasters.Where(s => s.UserName == model.LoginUserName && s.Password == model.LoginPassword).ToList();
+                    var UserMstDBList = dbObject.UserMasterSCARFSurveys.Where(s => s.UserName == model.LoginUserName && s.Password == model.LoginPassword).ToList();
 
                     // var UserMstDBList = dbObject.UserMasters.OrderByDescending(x => x.UserId).Where(x => x.UserName =model.UserName).ToList();
                     if (UserMstDBList != null && UserMstDBList.Count > 0)

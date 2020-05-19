@@ -26,11 +26,29 @@ namespace BCBS_Api.DataAccess
         }
     
         public DbSet<Claim> Claims { get; set; }
+        public DbSet<Claims1> Claims1 { get; set; }
+        public DbSet<Claims2> Claims2 { get; set; }
+        public DbSet<Claims3> Claims3 { get; set; }
+        public DbSet<Claims4> Claims4 { get; set; }
+        public DbSet<Claims5> Claims5 { get; set; }
+        public DbSet<Claims6> Claims6 { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<CustomerService> CustomerServices { get; set; }
+        public DbSet<Enterprise> Enterprises { get; set; }
+        public DbSet<Healthcare> Healthcares { get; set; }
+        public DbSet<Healthcare1> Healthcare1 { get; set; }
+        public DbSet<Healthcare2> Healthcare2 { get; set; }
+        public DbSet<Healthcare3> Healthcare3 { get; set; }
+        public DbSet<Healthcare4> Healthcare4 { get; set; }
+        public DbSet<Healthcare5> Healthcare5 { get; set; }
+        public DbSet<Membership> Memberships { get; set; }
+        public DbSet<Sale> Sales { get; set; }
         public DbSet<SCARFSurveyAnswer> SCARFSurveyAnswers { get; set; }
+        public DbSet<StateHealthPlan> StateHealthPlans { get; set; }
         public DbSet<U65> U65 { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserCours> UserCourses { get; set; }
         public DbSet<UserMaster> UserMasters { get; set; }
+        public DbSet<UserMasterSCARFSurvey> UserMasterSCARFSurveys { get; set; }
     }
 }

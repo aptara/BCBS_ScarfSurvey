@@ -14,9 +14,16 @@ namespace BCBS_Api.DataAccess
     
     public partial class Course
     {
+        public Course()
+        {
+            this.UserCourses = new HashSet<UserCours>();
+        }
+    
         public System.Guid Id { get; set; }
         public string CourseTitle { get; set; }
         public string DeliveryMethod { get; set; }
         public string TotalContactHours { get; set; }
+    
+        public virtual ICollection<UserCours> UserCourses { get; set; }
     }
 }

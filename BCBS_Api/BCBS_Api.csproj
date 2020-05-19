@@ -219,10 +219,61 @@
     <Compile Include="DataAccess\Claim.cs">
       <DependentUpon>BCBS.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\Claims1.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Claims2.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Claims3.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Claims4.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Claims5.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Claims6.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\Course.cs">
       <DependentUpon>BCBS.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\CustomerService.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Enterprise.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Healthcare.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Healthcare1.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Healthcare2.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Healthcare3.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Healthcare4.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Healthcare5.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Membership.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Sale.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\SCARFSurveyAnswer.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\StateHealthPlan.cs">
       <DependentUpon>BCBS.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\U65.cs">
@@ -235,6 +286,9 @@
       <DependentUpon>BCBS.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\UserMaster.cs">
+      <DependentUpon>BCBS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserMasterSCARFSurvey.cs">
       <DependentUpon>BCBS.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">

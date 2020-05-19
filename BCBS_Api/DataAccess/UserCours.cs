@@ -20,5 +20,8 @@ namespace BCBS_Api.DataAccess
         public Nullable<int> Score { get; set; }
         public System.DateTime CreatedDate { get; set; }
         public string NPI { get; set; }
+    
+        public virtual Course Course { get; set; }
+        public virtual User User { get; set; }
     }
 }

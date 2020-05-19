@@ -5,13 +5,33 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1d825b77d238499cbc4a29feea10f47d" Name="Diagram1" ZoomLevel="45">
-        <EntityTypeShape EntityType="BCBSModel.Claim" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BCBSModel.Course" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BCBSModel.SCARFSurveyAnswer" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="BCBSModel.U65" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BCBSModel.User" Width="1.5" PointX="4.75" PointY="5.75" />
-        <EntityTypeShape EntityType="BCBSModel.UserCours" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BCBSModel.UserMaster" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BCBSModel.Claim" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BCBSModel.Claims1" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BCBSModel.Claims2" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BCBSModel.Claims3" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BCBSModel.Claims4" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BCBSModel.Claims5" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BCBSModel.Claims6" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BCBSModel.Course" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="BCBSModel.CustomerService" Width="1.5" PointX="6.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BCBSModel.Enterprise" Width="1.5" PointX="8.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BCBSModel.Healthcare" Width="1.5" PointX="10.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BCBSModel.Healthcare1" Width="1.5" PointX="12.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BCBSModel.Healthcare2" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BCBSModel.Healthcare3" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BCBSModel.Healthcare4" Width="1.5" PointX="16.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BCBSModel.Healthcare5" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BCBSModel.Membership" Width="1.5" PointX="0.75" PointY="18.75" />
+        <EntityTypeShape EntityType="BCBSModel.Sale" Width="1.5" PointX="2.75" PointY="18.75" />
+        <EntityTypeShape EntityType="BCBSModel.SCARFSurveyAnswer" Width="1.5" PointX="18.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BCBSModel.StateHealthPlan" Width="1.5" PointX="18.75" PointY="19.75" />
+        <EntityTypeShape EntityType="BCBSModel.U65" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BCBSModel.User" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="BCBSModel.UserCours" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="BCBSModel.UserMaster" Width="1.5" PointX="20.75" PointY="5.75" />
+        <EntityTypeShape EntityType="BCBSModel.UserMasterSCARFSurvey" Width="1.5" PointX="20.75" PointY="9.75" />
+        <AssociationConnector Association="BCBSModel.fk_UserFavorites_Course" />
+        <AssociationConnector Association="BCBSModel.fk_UserFavorites_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
