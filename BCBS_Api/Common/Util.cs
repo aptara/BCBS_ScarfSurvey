@@ -44,6 +44,20 @@ namespace BCBS_Api.Common
             string SMTP_UserName = ConfigurationManager.AppSettings["SMTP_UserName"];
             string SMTP_Password = ConfigurationManager.AppSettings["SMTP_Password"];
             string SMTP_FromEmailId = ConfigurationManager.AppSettings["SMTP_FromEmailId"];
+            Util.LogInfo("Post", "SMTP_HostName :" + SMTP_HostName);
+            Util.LogInfo("Post", "SMTP_PORT :" + SMTP_PORT);
+            Util.LogInfo("Post", "SMTP_UserName :" + SMTP_UserName);
+            Util.LogInfo("Post", "SMTP_Password :" + SMTP_Password);
+            Util.LogInfo("Post", "SMTP_FromEmailId :" + SMTP_FromEmailId);
+            Util.LogInfo("Post", "reciepient :" + reciepient);
+            Util.LogInfo("Post", "subject :" + subject);
+
+            if (AttachmentPath.ContentStream != null)
+            {
+                Util.LogInfo("Post", "AttachmentPath :" + "Generate Attachment Success");
+            }            
+
+
             try
             {
                 int port = 0;
