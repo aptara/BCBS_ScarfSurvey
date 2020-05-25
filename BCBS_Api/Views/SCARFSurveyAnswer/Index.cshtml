@@ -32,13 +32,13 @@
                 columns.Bound(p => p.Fairness).Width(180).Title("Fairness");
                 columns.Bound(p => p.FairnessText).Width(300).Title("Fairness Text");
             })
-            .Pageable(paging => paging.PageSizes(new int[] { 10, 15, 20, 25, 30 }).PreviousNext(true).Refresh(true).Info(true).Input(true).Numeric(true))
+            .Pageable(paging => paging.PageSizes(new int[] { 1000, 1500, 2000, 2500, 3000 }).PreviousNext(true).Refresh(true).Info(true).Input(true).Numeric(true))
             .Scrollable(s => s.Height("auto"))
             .Sortable()
             .Filterable()
             .Resizable(x => x.Columns(true))
             .DataSource(dataSource => dataSource.Ajax()
-            .PageSize(10)
+            .PageSize(1000)
             .ServerOperation(false)
             .Model(model =>
             {
