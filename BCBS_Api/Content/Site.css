@@ -6,37 +6,42 @@
     src: url('fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     url('fonts/Roboto-Regular.woff2') format('woff2'), /* Super Modern Browsers */
     url('fonts/Roboto-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-    url('fonts/Roboto-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-
+    url('fonts/Roboto-Regular.ttf') format('truetype'),; /* Safari, Android, iOS */
     /* Legacy iOS */
 }
+
 html {
     /*background-color: #e2e2e2;*/
     margin: 0;
     padding: 0;
 }
+
 html {
     position: relative;
     min-height: 100%;
 }
+
 body {
     background-color: #fff;
     color: #333;
-     font-size: 13px;
+    font-size: 13px;
     font-family: Arial;
     margin: 0;
     padding: 0;
-    margin-bottom:65px;
+    margin-bottom: 65px;
 }
+
 .welcome-wrapper {
     float: right;
     margin-right: 10px;
     margin-top: 18px;
 }
+
 img.logo {
     margin-top: 10px;
     margin-left: 10px;
 }
+
 a {
     color: #333;
     outline: none;
@@ -127,18 +132,18 @@ h5, h6 {
     padding-bottom: 35px;
 }
 
-    .main-content {
-        background: url("../Images/accent.png") no-repeat;
-        padding-left: 10px;
-        padding-top: 30px;
-    }
+.main-content {
+    background: url("../Images/accent.png") no-repeat;
+    padding-left: 10px;
+    padding-top: 30px;
+}
 
-    .featured + .main-content {
-        background: url("../Images/heroAccent.png") no-repeat;
-    }
+.featured + .main-content {
+    background: url("../Images/heroAccent.png") no-repeat;
+}
 
 header .content-wrapper {
-    padding-top: 20px; 
+    padding-top: 20px;
 }
 
 footer {
@@ -158,12 +163,12 @@ footer {
     margin: 0;
 }
 
-.site-title a, .site-title a:hover, .site-title a:active {
-    background: none;
-    color: #c8c8c8;
-    outline: none;
-    text-decoration: none;
-}
+    .site-title a, .site-title a:hover, .site-title a:active {
+        background: none;
+        color: #c8c8c8;
+        outline: none;
+        text-decoration: none;
+    }
 
 
 /* login
@@ -183,12 +188,12 @@ footer {
         text-decoration: none;
     }
 
-    #login a.username {
-        background: none;
-        margin: 0;
-        padding: 0;
-        text-decoration: underline;
-    }
+        #login a.username {
+            background: none;
+            margin: 0;
+            padding: 0;
+            text-decoration: underline;
+        }
 
     #login ul {
         margin: 0;
@@ -222,10 +227,10 @@ ul#menu {
             text-decoration: none;
         }
 
-        ul#menu li a:hover {
-            color: #333;
-            text-decoration: none;
-        }
+            ul#menu li a:hover {
+                color: #333;
+                text-decoration: none;
+            }
 
 
 /* page elements
@@ -246,27 +251,27 @@ ul#menu {
         padding: 20px 40px 30px 40px;
     }
 
-        .featured hgroup.title h1, .featured hgroup.title h2 {
-            color: #fff;
-        }
+    .featured hgroup.title h1, .featured hgroup.title h2 {
+        color: #fff;
+    }
 
-        .featured p {
-            font-size: 1.1em;
-        }
+    .featured p {
+        font-size: 1.1em;
+    }
 
 /* page titles */
 hgroup.title {
     margin-bottom: 10px;
 }
 
-hgroup.title h1, hgroup.title h2 {
-    display: inline;
-}
+    hgroup.title h1, hgroup.title h2 {
+        display: inline;
+    }
 
-hgroup.title h2 {
-    font-weight: normal;
-    margin-left: 3px;
-}
+    hgroup.title h2 {
+        font-weight: normal;
+        margin-left: 3px;
+    }
 
 /* features */
 section.feature {
@@ -378,12 +383,12 @@ aside {
         width: 250px;
     }
 
-    #loginForm input[type="checkbox"],
-    #loginForm input[type="submit"],
-    #loginForm input[type="button"],
-    #loginForm button {
-        width: auto;
-    }
+        #loginForm input[type="checkbox"],
+        #loginForm input[type="submit"],
+        #loginForm input[type="button"],
+        #loginForm button {
+            width: auto;
+        }
 
 #socialLoginForm {
     margin-left: 40px;
@@ -392,7 +397,7 @@ aside {
 }
 
     #socialLoginForm h2 {
-        margin-bottom:  5px;
+        margin-bottom: 5px;
     }
 
 #socialLoginList button {
@@ -443,9 +448,9 @@ label {
     font-weight: 600;
 }
 
-label.checkbox {
-    display: inline;
-}
+    label.checkbox {
+        display: inline;
+    }
 
 input, textarea {
     border: 1px solid #e2e2e2;
@@ -466,32 +471,32 @@ textarea {
         border: 1px solid #7ac0da;
     }
 
-    input[type="checkbox"] {
-        background: transparent;
-        border: inherit;
-        width: auto;
-    }
+input[type="checkbox"] {
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
 
-    input[type="submit"],
-    input[type="button"],
-    button {
-        background-color: #d3dce0;
-        border: 1px solid #787878;
-        cursor: pointer;
-        font-size: 1.2em;
-        font-weight: 600;
-        padding: 7px;
-        margin-right: 8px;
-        width: auto;
-    }
+input[type="submit"],
+input[type="button"],
+button {
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px;
+    margin-right: 8px;
+    width: auto;
+}
 
-    td input[type="submit"],
-    td input[type="button"],
-    td button {
-        font-size: 1em;
-        padding: 4px;
-        margin-right: 4px;
-    }
+td input[type="submit"],
+td input[type="button"],
+td button {
+    font-size: 1em;
+    padding: 4px;
+    margin-right: 4px;
+}
 
 /* info and errors */
 .message-info {
@@ -570,36 +575,36 @@ th {
         position: relative;
     }
 
-    th a:link, th a:visited, th a:active, th a:hover {
-        color: #333;
-        font-weight: 600;
-        text-decoration: none;
-        padding: 0;
-    }
+        th a:link, th a:visited, th a:active, th a:hover {
+            color: #333;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 0;
+        }
 
-    th a:hover {
-        color: #000;
-    }
+        th a:hover {
+            color: #000;
+        }
 
     th.asc a, th.desc a {
         margin-right: .75em;
     }
 
-    th.asc a:after, th.desc a:after {
-        display: block;
-        position: absolute;
-        right: 0em;
-        top: 0;
-        font-size: 0.75em;
-    }
+        th.asc a:after, th.desc a:after {
+            display: block;
+            position: absolute;
+            right: 0em;
+            top: 0;
+            font-size: 0.75em;
+        }
 
-    th.asc a:after {
-        content: '▲';
-    }
+        th.asc a:after {
+            content: '▲';
+        }
 
-    th.desc a:after {
-        content: '▼';
-    }
+        th.desc a:after {
+            content: '▼';
+        }
 
 td {
     padding: 0.25em 2em 0.25em 0em;
@@ -656,9 +661,9 @@ tr.pager td {
             padding: 0;
         }
 
-        #login a:hover {
-            color: #333;
-        }
+            #login a:hover {
+                color: #333;
+            }
 
     /* menu */
     nav {
@@ -723,12 +728,12 @@ tr.pager td {
                 background: none;
             }
 
-     /* features */
-     section.feature {
+    /* features */
+    section.feature {
         float: none;
         padding: 10px;
         width: auto;
-     }
+    }
 
         section.feature img {
             color: #999;
@@ -780,34 +785,41 @@ tr.pager td {
 }
 
 .container {
-padding-right: 15px;
-padding-left: 15px;
-margin-right: auto;
-margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
+
 .k-block, .k-header, .k-grid-header, .k-toolbar, .k-grouping-header, .k-pager-wrap, .k-button, .k-draghandle {
-     background:#26ACE2;
+    background: #26ACE2;
 }
+
 .k-pager-wrap {
-    color:#fff;
+    color: #fff;
 }
+
 .k-link:link {
-    color:#fff;
+    color: #fff;
 }
+
 a.k-link:hover {
     background-color: #2a83a7;
 }
+
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
     border: 1px solid #d3d3d3;
 }
+
 .k-toolbar a.ui-button {
-    color:#fff;
-    background:#0a6286;
-    border:0px;
+    color: #fff;
+    background: #0a6286;
+    border: 0px;
     font-family: 'Arial';
     border-radius: 9px;
 }
-.welcome-user, .welcome-user a  {
+
+.welcome-user, .welcome-user a {
     background: #0a6286;
     color: #fff;
     padding: 5px;
@@ -816,14 +828,18 @@ a.k-link:hover {
     font-size: 14px;
     border-radius: 9px;
 }
+
 .k-grid-content {
-    min-height:350px;
+    min-height: 350px;
+    overflow-y: auto;
 }
+
 h1 {
     font-size: 24px;
     padding-bottom: 10px;
     margin: 0px;
 }
+
 header {
     background: #efeeee;
     border-bottom: 1px solid #ccc;
@@ -831,6 +847,7 @@ header {
     margin-bottom: 19px;
     box-shadow: 1px 2px 1px 1px #efeeee;
 }
+
 .k-grid-content .k-alt a, .k-grid-content a.view-btn {
     text-decoration: none;
     background: #0a6286;
@@ -838,31 +855,40 @@ header {
     color: #fff;
     border-radius: 9px;
 }
+
 footer {
-	max-width:2560px;
-	margin:0 auto;
-	color:#484848;
+    max-width: 2560px;
+    margin: 0 auto;
+    color: #484848;
     border-top: 1px solid #e0e0e0;
 }
+
 .footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 52px;
-	background: #f6f6f6;
-	line-height: 50px;
-	text-align: center;
-	font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    background: #f6f6f6;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
     z-index: 9999;
 }
-.footer a {
-	color:#484848;
-}
+
+    .footer a {
+        color: #484848;
+    }
+
 .footer-lt {
-	float:left;
-	padding-left:15px;
+    float: left;
+    padding-left: 15px;
 }
+
 .footer-rt {
-	float:right;
-	padding-right:15px;
+    float: right;
+    padding-right: 15px;
+}   
+
+div.k-grid-header {
+    padding-right: 0px !important
 }
