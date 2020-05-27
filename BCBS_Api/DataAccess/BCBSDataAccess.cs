@@ -356,21 +356,21 @@ namespace BCBS_Api.DataAccess
                             ReportDate = Convert.ToDateTime(DateTime.Now.ToLongDateString())
                         };
 
-                        var response = dbObject.SCARFSurveyAnswers.Where(b => b.WorkDayId == SCARFSurveyAnswerEntity.WorkDayId).FirstOrDefault();
-                        if (response == null)
-                        {
+                        //var response = dbObject.SCARFSurveyAnswers.Where(b => b.WorkDayId == SCARFSurveyAnswerEntity.WorkDayId).FirstOrDefault();
+                        //if (response == null)
+                        //{
                             dbObject.SCARFSurveyAnswers.Add(SCARFSurveyAnswerEntity);
                             Util.LogInfo("Post", "before calling db :" + dbObject.Database.Connection.ConnectionString);
                             result = dbObject.SaveChanges();
                             result = SCARFSurveyAnswerEntity.SCARFSurveyId;
-                        }
-                        else
-                        {
-                            Util.LogInfo("Post", "Duplicate WorkDayId : " + SCARFSurveyAnswerEntity.WorkDayId);
-                            OnjSCARFSurvey.Message = "Duplicate WorkDayId";
-                            OnjSCARFSurvey.IsErrrorMsg = true;
-                            result = -1;
-                        }
+                        //}
+                        //else
+                        //{
+                        //    Util.LogInfo("Post", "Duplicate WorkDayId : " + SCARFSurveyAnswerEntity.WorkDayId);
+                        //    OnjSCARFSurvey.Message = "Duplicate WorkDayId";
+                        //    OnjSCARFSurvey.IsErrrorMsg = true;
+                        //    result = -1;
+                        //}
                         Util.LogInfo("Post", "after calling db");
                     }
                     #endregion
